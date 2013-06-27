@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://kyleboon.me
-title: 
-subtitle: A blogging framework for hackers.
+url: http://www.kyleboon.org
+title: Blog of Kyle Boon 
+subtitle: Mostly software development 
 author: Kyle Boon
 simple_search: http://google.com/search
-description:
+description: Stuff and things
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: 'kyle.f.boon@gmail.com'
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -73,7 +73,7 @@ twitter_user: kyleboon
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -90,11 +90,11 @@ delicious_user: kyleboon
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: kyleboon.org
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-42068604-1
 
 # Facebook Like
 facebook_like: true

@@ -1,0 +1,14 @@
+---
+layout: post
+comments: true
+title: "2013 Goals"
+---
+In 2012 I was promoted to lead developer. We have a team of 24 developers and we expect to continue growing quickly. My goals for 2013 are focussed around team and team building.
+<h1><span style="line-height:15px;"><span style="line-height:15px;"><span style="line-height:15px;">Recruiting / Interviewing</span></span></span></h1>
+I'm not a recruiter and I'm not going to email random people and tell them they should apply to work at Bloom Health, but I can be a part of recruiting efforts by a) being more visible in the community as a representative of bloom and b) attending recruiting events at local colleges. I am going to a career fair this week in fact.Interviewing is hard. In fact I would rather be interviewed than interview someone else. This is probably because I like to talk and being interviewed is a great time to talk. It's also my downfall while interviewing other people because I need to *listen* and not talk for once. Additionally I need to be more prepared when I go into an interview or technical phone screen.
+# Onboarding
+I want to make sure new employees have a good experience as they come onto our team. I don't have anyone directly reporting to me but as a lead I need to do a better job of making sure that people integrate with the team quickly.
+# Mentoring
+Mentoring is almost an extension of onboarding. The most obvious opportunity for mentoring is for the developers on my scrum team. I want to encourage more pair programming and try to pair with all three of those developers on a regular basis. Outside of that I need to find opportunities to mentor members of the larger team. Last year I had a coderetreat that was open to the entire Twin Cities and I'd like to do events like this with the team at Bloom.
+
+The challenge is to do things and to continue to deliver on my normal engineering responsibilities. There doesn't seem to be a lot of good references for building technical teams and effectively mentoring technical people. If anyone has a good book or blog recommendation I'd love to hear it!
