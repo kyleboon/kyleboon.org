@@ -90,7 +90,7 @@ delicious_user: kyleboon
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: kyleboon.org
+disqus_short_name: kyleboon
 disqus_show_comment_count: false
 
 # Google Analytics
