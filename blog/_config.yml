@@ -4,10 +4,10 @@
 
 url: http://www.kyleboon.org
 title: Blog of Kyle Boon 
-subtitle: Mostly software development 
+subtitle: 
 author: Kyle Boon
 simple_search: http://google.com/search
-description: Stuff and things
+description: web developer, Minneapolis enthusiast, wine/beer snob, recovering buckeye fan, bicycler
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
