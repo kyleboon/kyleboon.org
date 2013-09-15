@@ -3,7 +3,7 @@ layout: post
 title: Dropwizard project template
 date: 2013-07-05 19:45
 comments: true
-categories: dropwizard, lazybones, groovy 
+categories: dropwizard lazybones groovy 
 ---
 
 At [bloomhealth](http://www.gobloomhealth.com/jobs/) we use

@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "Using two github accounts from one laptop"
+categories: github shell
 ---
 I have two github accounts (one for work and one personal) and I want to be able to access repositories from either account from my laptop without switching users locally.  I have separate rsa public keys for each account but needed an easy way to force git to know which one to use. Here's what I am doing:
 <pre><code>~/.ssh/config

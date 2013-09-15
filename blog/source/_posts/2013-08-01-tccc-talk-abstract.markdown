@@ -3,7 +3,7 @@ layout: post
 title: "Abstract for Twin Cities Code Camp 15"
 date: 2013-08-01 09:31
 comments: true
-categories: 
+categories: speaking
 ---
 I submitted an abstract to speak at Twin Cities Code Camp 15 in October.
 This event has over 300 people for a single day, free conference at the

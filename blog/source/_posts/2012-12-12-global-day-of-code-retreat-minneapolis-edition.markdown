@@ -5,7 +5,7 @@ title: "Global Day of Code Retreat - Minneapolis Edition"
 date: 2012-12-12 5:59
 comments: true
 external-url:
-categories:
+categories: speaking events
 ---
 On Saturday I hosted and facilitated Global Day of Code Retreat - Minneapolis. My employer <a href="http://www.gobloomhealth.com/">BloomHealth</a> sponsored the event at our office in downtown Minneapolis. We had 16 people come in on a Saturday in the snow during the Holidays for a day of deliberate practice at the craft of software development.  Worldwide there was over 150 cities in 22 timezones and 3,000 people participating.
 # What is it Code Retreat?

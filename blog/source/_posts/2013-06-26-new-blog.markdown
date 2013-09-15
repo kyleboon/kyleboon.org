@@ -3,7 +3,7 @@ layout: post
 title: New blog
 date: 2013-06-26 20:00
 comments: true
-categories: 
+categories: meta
 ---
 
 I got bored of hosting on wordpress. I've moved over to an octopress

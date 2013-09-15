@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "2013 Goals"
+categories: goals meta
 ---
 In 2012 I was promoted to lead developer. We have a team of 24 developers and we expect to continue growing quickly. My goals for 2013 are focussed around team and team building.
 <h1><span style="line-height:15px;"><span style="line-height:15px;"><span style="line-height:15px;">Recruiting / Interviewing</span></span></span></h1>
