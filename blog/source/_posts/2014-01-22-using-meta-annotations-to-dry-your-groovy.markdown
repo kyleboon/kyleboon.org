@@ -19,16 +19,16 @@ Every one of our entities has these annotations on it.  You can define a meta-an
 
 ```
 @CompileStatic
-@JPAEntity
+@Entity
 @Table
 @AnnotationCollector
-@interface Entity { ... }
+@interface JPAEntity { ... }
 ```
 
 Then the user entity definition is reduced:
 
 ```
-@Entity(name = 'user')
+@JPAEntity(name = 'user')
 class UserEntity { ... }
 ```
 
