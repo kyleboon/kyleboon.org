@@ -22,7 +22,7 @@ Every one of our entities has these annotations on it.  You can define a meta-an
 @Entity
 @Table
 @AnnotationCollector
-@interface JPAEntity { ... }
+@interface JPAEntity {  }
 ```
 
 Then the user entity definition is reduced:
@@ -32,7 +32,7 @@ Then the user entity definition is reduced:
 class UserEntity { ... }
 ```
 
-The ```name``` attribute is then passed to every annotation in the ```@Entity``` annotation which has that property. In this case it is only the ```@JPAEntity``` annotation.
+The ```name``` attribute is then passed to every annotation in the ```@JPAEntity``` meta-annotation which has that property. In this case it is only the ```@Entity``` annotation.
 
 This technique not only lets you reduce some repeated code, but makes it easy to apply consistant changes to every class. If you decide you don't want to use static compilation anymore, just remove it from the meta-annotation. If you want to add a canonical constructor to every entity, just add ```@Canonical```. 
 
