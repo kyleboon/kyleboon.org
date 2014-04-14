@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/kyleboon
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kyleboon.org
+  * I am kyleboon (https://keybase.io/kyleboon) on keybase.
+  * I have a public key with fingerprint ADD6 9635 3455 B440 3607  13C5 3178 083D D503 047E
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "add696353455b440360713c53178083dd503047e",
+            "host": "keybase.io",
+            "key_id": "3178083dd503047e",
+            "uid": "7e20c5532065b193a399a824646e6d00",
+            "username": "kyleboon"
+        },
+        "service": {
+            "hostname": "kyleboon.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397412149,
+    "expire_in": 157680000,
+    "prev": "9134473a4c83b38e96b0a30589c1f6cc5b91a44b705d25e747d8f72f9d4849e3",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.5
+Comment: https://keybase.io/crypto
+
+yMHpAnicbZFtSBRbHMbX9xTKJAIJb+EkVLAtM3vOmZeV7QWUJBCvWbrBxjYvZ9cx
+m9lmX9JMwcu9RVcxvWLQy4WyUEFBS/RmUngl/KBhSZJWLqsIFVGQQSSp6BmpL9H5
+Mpzn/3ueZw7/xxvjLCkxT3M/vZ0Tl+WYsaGFkKXo8ASqoiRdqaQcVdQpvP7xqpoP
+G35D1YKUgxIVhRVYgABESIKQBizNMUBGgOF4mgeKgmhAQw5TVqpUD5gOEiOJAWxT
+daKRi0dViPoLPrQ+4LCdlhECdppFEiMAEQiCyNshC1nMKjRtggFsaOJpbIZXlmNJ
+1zWq2koRNazKRK1ar/6JsOmGj3j9hh7UZb2cTEqDQb/DNAYr/SZ5Fkue7xkeSdUU
+8m5iCGMjoJICB0NIOaiaoQwQOMjYGShYKVzhVw3sUU0CcSxPk2PW4DCJFBgAIQdE
+KPNAAjwWWIkWAY14QWa8rCwjSWBECCWORoodYQ5yCu/l7F5BgTwUMCD9AXxG0ykH
+S35T9JHIgOrTxGDIwFT18JA73hKTYklMiDU3Z0lJ3vxjn1dqk1Zd8Yvdj1Zz/qrZ
+1T8S6f3cqnUsZTsL+9InowNlxpYDckZtT1fGVLY1cj4zbfv0oP2WuPT3js5/7rds
+cJ5YTS2Ldf7fnKe9jtQt/nE5LWuyPrMhrj1UcGx2rmfbA+/wcneiy1VS83Blzure
+5Ivm3mxGI/q1GThyb7T3S3Lk1VRJy+Do0MDW1CP8/IeJlU739fwmW17Dhah7Z+vA
++N6S2bYXK67fMr7W/n5yT8Fx57/h3fOXkvpbisG5hW+29qyPz3H4xrvGPzunk6NH
+D9aN1Tzbj8eVQ019dXev5pcmpM/MdF9szLpT39XFtBU7OgqLHO9f7nvi7qsYQ8XV
+/83fzmGoN2shFRn9
+=yJZK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kyleboon
+
+==================================================================
+
