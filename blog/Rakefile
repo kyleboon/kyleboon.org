@@ -50,7 +50,7 @@ end
 #######################
 
 desc "Generate jekyll site"
-task :generate do
+task :orig_generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
@@ -400,8 +400,114 @@ task :list do
   puts "(type rake -T for more detail)\n\n"
 end
 
+desc "Combine CSS"
+task :combine_css do
+  puts "## Combining CSS"
+  styles_dir = "#{source_dir}/stylesheets"
+  # Watch out! Order of files matters here!
+  system "cat #{styles_dir}/font-awesome.min.css #{styles_dir}/screen.css > #{styles_dir}/all.css"
+end
+
+desc "Combine JS"
+task :combine_js do
+  puts "## Combining JS"
+  scripts_dir = "#{source_dir}/javascripts"
+  system "cat #{scripts_dir}/libs/jquery.min.js #{scripts_dir}/libs/jHXR.js #{scripts_dir}/libs/swfobject > #{scripts_dir}/all.js"
+end
+
+desc "Combine CSS/JS"
+task :combine => [:combine_css, :combine_js]
+
+# For asset versioning
+asset_version = Time.new.strftime("%y%m%d%H%M")
+
+desc "Minify CSS"
+task :minify_css do
+  puts "## Minifying CSS"
+  input = "#{source_dir}/stylesheets/all.css"
+  output = "#{public_dir}/stylesheets/all.#{asset_version}.css"
+  system "cleancss -e -o #{output} #{input}"
+end
+
+desc "Minify JS"
+task :minify_js do
+  puts "## Minifying JS"
+  input = "#{source_dir}/javascripts/all.js"
+  output = "#{source_dir}/javascripts/all.#{asset_version}.js"
+  smap_option = "--source-map all.#{asset_version}.js.map"
+  smap_root_option = "--source-map-root http://kyleboon.org"
+  system "uglifyjs #{input} -o #{output} #{smap_option} #{smap_root_option} -p 5 -m -c"
+  Dir.glob("#{source_dir}/javascripts/all.*").each do |f|
+    FileUtils.mv(f, "#{public_dir}/javascripts")
+  end
+end
+
+desc "Minify CSS/JS"
+task :minify => [:minify_css, :minify_js]
+
+desc "GZip HTML"
+task :gzip_html do
+  puts "## GZipping HTML"
+  system 'find public/ -type f -name \*.html -exec gzip -9 {} \;'
+  # Batch rename .html.gz to .html
+  Dir['**/*.html.gz'].each do |f|
+    test(?f, f) and File.rename(f, f.gsub(/\.html\.gz/, '.html'))
+  end
+end
+
+desc "GZip CSS"
+task :gzip_css do
+  puts "## GZipping CSS"
+  system 'find public/ -type f -name \*.css -exec gzip -9 {} \;'
+  # Batch rename .html.gz to .html
+  Dir['**/*.css.gz'].each do |f|
+    test(?f, f) and File.rename(f, f.gsub(/\.css\.gz/, '.css'))
+  end
+end
+
+desc "GZip JS"
+task :gzip_js do
+  puts "## GZipping JS"
+  system 'find public/ -type f -name \*.js -exec gzip -9 {} \;'
+  # Batch rename .html.gz to .html
+  Dir['**/*.js.gz'].each do |f|
+    test(?f, f) and File.rename(f, f.gsub(/\.js\.gz/, '.js'))
+  end
+end
+
+desc "GZip All"
+task :gzip => [:gzip_html, :gzip_css, :gzip_js]
+
+desc "Update head include for static assets"
+task :update_asset_versions do
+  puts "## Updating asset versions"
+  # Replace instances of all.js and all.1234.js with all.{version}.js
+  content = ''
+  File.open("#{source_dir}/_includes/head.html", 'r') do |file|
+    content = file.read.gsub(/all(\.\d+)?\./, "all.#{asset_version}.")
+  end
+  File.open("#{source_dir}/_includes/head.html", 'w') do |file|
+    file.write(content)
+  end
+end
+
+
 desc "Deploy website via s3cmd"
 task :s3 do
-    puts "## Deploying website via s3cmd"
-      ok_failed system("s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/")
+  puts "## Deploying website via s3cmd"
+  # sync gzipped html files
+  # NOTE: Setting charset in header for faster browser rendering
+  ok_failed system("s3cmd sync -P public/* s3://#{s3_bucket}/ --mime-type='text/html; charset=utf-8' --add-header 'Content-Encoding: gzip' --exclude '*.*' --include '*.html'")
+  # sync non gzipped, non js/css/image files
+  ok_failed system("s3cmd sync --guess-mime-type -P public/* s3://#{s3_bucket}/ --exclude 'images/' --exclude '*.css' --exclude '*.js' --exclude '*.html'")
+  # sync gzipped css and js
+  ok_failed system("s3cmd sync --guess-mime-type -P public/* s3://#{s3_bucket}/ --add-header 'Content-Encoding: gzip' --add-header 'Cache-Control: public, max-age=31600000' --exclude '*.*' --include '*.js' --include '*.css'")
+  # sync all images
+  ok_failed system("s3cmd sync --guess-mime-type -P --add-header 'Cache-Control: public, max-age=31600000' public/images/* s3://#{s3_bucket}/images/")
 end
+
+desc "Generate jekyll site"
+task :generate => [:sass, :update_asset_versions, :orig_generate, :gzip]
+
+desc "Generate website and deploy"
+task :gen_deploy => [:integrate, :generate, :deploy]

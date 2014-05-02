@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Multi-Factor Authentication - Part 1
-date: 2014-04-18 12:00
+date: 2014-05-18 12:00
 comments: true
 categories: grails spring-security 
 ---
 
-_This post is cross posted on [Bloom Health's blog]()_
+_This post is cross posted on [Bloom Health's blog](http://www.gobloomhealth.com/multi-factor-authentication-part-1/)_
 
 Two-Factor authentication is a form of authentication which requires the user to confirm their identity by more than just a username and password. There are three types authentication factors from which two must be used. The factors are knowledge (username/password), possession (sending a text message to a phone) and inheritance (fingerprint). This type of authentication has recently become more popular thanks to Google, Twitter and Facebook all adopting multi-factor authentication as an option. If you don't have this enabled for your accounts, please stop reading this and enable it before you do anything else.
 
