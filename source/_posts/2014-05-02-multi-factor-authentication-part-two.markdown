@@ -6,9 +6,9 @@ comments: true
 categories: grails spring-security
 ---
 
-_This post is cross posted on [Bloom Health's blog](http://www.gobloomhealth.com/multi-factor-authentication-part-1/)_
+_This post is cross posted on [Bloom Health's blog](http://www.gobloomhealth.com/multi-factor-authentication-part-2/)_
 
-At the end of part 1, we had the first step of multi-factor authentication finished. The second authentication step will verify a token sent via text message to the user. In order to accomplish this, there needs to be a Spring Security filter and authentication provider. The filter will be triggered when the security token is submitted by the user, it will delegate to the authentication provider which will fully authenticate the user and provide the full list of roles from the ```DaoUserDetailsProvider```. 
+At the end of [part 1](http://kyleboon.org/blog/2014/05/18/two-factor-authentication/), the first step of multi-factor authentication was finished. The second authentication step will verify a token sent via text message to the user. In order to accomplish this, there needs to be a Spring Security filter and authentication provider. The filter will be triggered when the security token is submitted by the user, it will delegate to the authentication provider which will fully authenticate the user and provide the full list of roles from the ```DaoUserDetailsProvider```. 
 
 ### Implementing the 2nd Step of authentication
 
@@ -88,7 +88,7 @@ class TextMessageAuthenticationProvider implements AuthenticationProvider {
 }
 ```
 
-The authentication provider is just validating the token from the user is '1234'. Next we'll add twilio integration to actually send a token in a text message. After the token is validated,  a new Authentication Token with the fully populated list of roles is created and returned. 
+The authentication provider is just validating the token from the user is '1234'. After the token is validated,  a new Authentication Token with the fully populated list of roles is created and returned. 
 
 There is additional configuration that needs to be done to wire the beans correctly and register the beans correctly in spring security and that can been on [github](https://github.com/kyleboon/two-step-authentication-example/compare/step1...step2).
 
