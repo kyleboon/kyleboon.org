@@ -23,5 +23,3 @@ These features allow you to use Optional in a slightly groovier way. What do you
 * [Guava's discussion of null and when to avoid it](https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained)
 * [Stack overflow discussion of Optional](http://stackoverflow.com/questions/9561295/whats-the-point-of-guavas-optional-class)
 * [Optional pattern](http://en.wikipedia.org/wiki/Option_type)
-
-{% gist kyleboon/6567111 %}
