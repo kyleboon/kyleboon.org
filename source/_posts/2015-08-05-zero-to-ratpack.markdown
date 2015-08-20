@@ -5,7 +5,7 @@ date: 2015-08-05 10:56
 comments: true
 categories: ratpack
 ---
-## AKA The book about Ratpack you've been waiting for.
+# Introduction
 
 There is a lot of interest in [Ratpack](http://ratpack.io/) after the gr8conf conference season and a question I heard multiple times was "What's the use case for Ratpack?". It's a great question. The main advantages of Ratpack to me are:
 
@@ -61,7 +61,7 @@ Lazybones is the easiest way to bootstrap an empty, working Ratpack application.
 
 Run ```gradle run``` to see the skelaton start up. This will prove everything is installed correctly. Browse to ```http://localhost:5050/``` and you should see the page redirect to index.html. Try ```http://localhost:5050/about``` and see what happens. Remember what happens, it will be relevant.
 
-## Proof of Concept
+# Proof of Concept
 
 Now lets make this a proof of concept for a reverse proxy. Just for fun, this will reverse proxy cellarhq.com. Replace the contents of ```ratpack.groovy``` with the following:
 
