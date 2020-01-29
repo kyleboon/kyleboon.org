@@ -60,7 +60,6 @@ Having these numbers allows us to make an informed choice about the tradeoffs be
 
 ## Code
 
-All of the code can be found on [github](https://github.com/kyleboon/ec2-bcrypt-jmh-benchmark) of course.
 First the JMH test itself:
 
 ```java

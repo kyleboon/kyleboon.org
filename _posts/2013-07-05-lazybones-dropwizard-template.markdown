@@ -6,8 +6,8 @@ comments: true
 categories: dropwizard lazybones groovy 
 ---
 
-At [bloomhealth](http://www.gobloomhealth.com/jobs/) we use
-[dropwizard](http://dropwizard.codahale.com/) to build small, fast web
+At bloomhealth we use
+[dropwizard](https://www.dropwizard.io/en/stable/) to build small, fast web
 services. Recently I've been contributing to Peter Ledbrook's
 [lazybones](https://github.com/pledbrook/lazybones) project templating
 system and I finally made time to build a template for dropwizard. 

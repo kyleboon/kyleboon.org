@@ -21,7 +21,7 @@ The day is then broken down into 45 minute sessions. Each session has a differen
 	<li>Timed TDD: Tests should be small enough that its clear what to implement. In this session each pair uses a 2 minute timer. The pair must write a failing test AND make the test pass during that 2 minutes. If the pair doesn't have a passing test after two minutes, they must delete all the changes! If they do have a passing test, they have 2 minutes to refactor.</li>
 	<li>Last Session: Once again we remove the constraints and let people apply what they've learned for the day.</li>
 </ul>
-[caption id="attachment_69" align="aligncenter" width="300"]<a href="http://kyleboon.wordpress.com/2012/12/12/global-day-of-code-retreat-minneapolis-edition/2012-12-08-11-45-22/" rel="attachment wp-att-69"><img class="size-medium wp-image-69" alt="Silent Ping Pong Pairing" src="http://kyleboon.files.wordpress.com/2012/12/2012-12-08-11-45-22.jpg?w=300" width="300" height="225" /></a> Silent Ping Pong Pairing[/caption]
+
 
 After each session we had a 15 minute discussion and short break. The discussion is probably the most important part of the day. That's when everyone can decompress and share the experience with the other participants.
 # Reactions

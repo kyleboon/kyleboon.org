@@ -87,5 +87,5 @@ This method would work for regular Jersey applications as well. The code is in g
 * [New Relic Java Agent API](https://newrelic.com/docs/java/java-agent-api)
 * [Dropwizard Hibernate](https://github.com/dropwizard/dropwizard/tree/master/dropwizard-hibernate)
 * [Jersey Request Dispatcher interface](https://jersey.java.net/nonav/apidocs/1.5/jersey/com/sun/jersey/spi/dispatch/RequestDispatcher.html)
-* [Yammer Metrics Jersey Implementation](https://github.com/codahale/metrics/tree/master/metrics-jersey)
+* [Yammer Metrics Jersey Implementation](https://metrics.dropwizard.io/4.0.0/manual/jersey.html)
 

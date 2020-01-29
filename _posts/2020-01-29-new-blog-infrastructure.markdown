@@ -18,6 +18,8 @@ The process was very simple.
 * Copy the `Beautiful Jekyll` site over to mine, ignoring all the git related stuff. Commit that to git.
 * Update `_config.yml` with the values for my blog
     * The most important change was to `permalink` to keep the octopress url format. It should be set to `/blog/:year/:month/:day/:title/`
-* `bundle exec jekyll serve` and check over everything. Look for broken images and links. Iterate on the design and config until you're happy.
+* I installed `html-proofer` to look for broken external links and images.
+    * `gem 'html-proofer'` in your Gemfile. Then `bundle install` and generate the site `bundle exec jekyll build` and run `bundle exec htmlproofer ./_site`. It found a lot of broken links some html issues as well.  
+* `bundle exec jekyll serve` and make sure it looks reasonable
 
 To deploy I decided to set up Amazon Amplify which was also super easy. I pointed it to my public github repo and it recognized it as a jekyll site and configured Amplify to generate and deploy after every commit. Then I had Amplify take over the domain name from the s3 bucket that was configured before and everything was done. 

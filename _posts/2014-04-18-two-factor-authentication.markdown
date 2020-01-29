@@ -6,8 +6,6 @@ comments: true
 categories: grails spring-security 
 ---
 
-_This post is cross posted on [Bloom Health's blog](http://www.gobloomhealth.com/multi-factor-authentication-part-1/)_
-
 Two-Factor authentication is a form of authentication which requires the user to confirm their identity by more than just a username and password. There are three types authentication factors from which two must be used. The factors are knowledge (username/password), possession (sending a text message to a phone) and inheritance (fingerprint). This type of authentication has recently become more popular thanks to Google, Twitter and Facebook all adopting multi-factor authentication as an option. If you don't have this enabled for your accounts, please stop reading this and enable it before you do anything else.
 
 I started writing this post before the Heartbleed SSL vulnerability announced last week. I'm hoping that will bring more awareness and attention to [multi-factor](http://en.wikipedia.org/wiki/Multi-factor_authentication) or [passwordless](https://medium.com/cyber-security/9ed56d483eb) authentication.  Multi-factor authentication isn't just for Google, if you deal with personally identifiable information then you should be trying to make your user’s data as secure as possible. Luckily, creating a two-factor authentication process with grails and spring security isn't terribly difficult.
@@ -53,7 +51,7 @@ class HomeController {
 
 You should be able to start the application and log in and be directed to the HomeController index action. 
 
-![Default Spring Security Login](/images/login.png)
+![Default Spring Security Login](/img/login.png)
 
 What we want is to force the user to a secondary login page after a successful username and password authentication. To accomplish this, there is a new Role called "ROLE_STEP_ONE_AUTHENTICATED". Then I created a custom UserDetailsProvider bean that will override the roles coming from GORM and give the UserDetails object a single role.
 
@@ -146,6 +144,6 @@ And create a GSP for step two.
 </script>
 ```
 
-![Security Token Prompt](/images/securitytoken.png)
+![Security Token Prompt](/img/securitytoken.png)
 
 That's it for part one of two-factor authentication. At this point if user1 logs in, every page will redirect to the step two authentication page. In the next part of this blog series we'll complete step two and add the Twilio API for text messaging a security code to the end user.

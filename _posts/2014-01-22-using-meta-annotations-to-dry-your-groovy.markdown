@@ -132,6 +132,6 @@ Meta-annotations are a great way to reduce annotation duplication and make it a 
 
 ## References
 
-* [Groovy meta-annotation documentation](http://groovy.codehaus.org/Meta-annotations)
+* [Groovy meta-annotation documentation](https://groovy-lang.org/metaprogramming.html#meta-annotations)
 * [Groovy Goodness: Combining Annotations with AnnotationCollector](http://mrhaki.blogspot.com/2013/02/groovy-goodness-combining-annotations.html)
-* [Compile Time Metaprogramming - AST Transformations](http://groovy.codehaus.org/Compile-time+Metaprogramming+-+AST+Transformations)
+* [Compile Time Metaprogramming - AST Transformations](https://groovy-lang.org/metaprogramming.html#developing-ast-xforms)

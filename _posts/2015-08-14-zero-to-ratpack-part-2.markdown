@@ -7,11 +7,7 @@ categories: ratpack
 ---
 
 # Some Notes
-
-First, I realized I stole the naming scheme for this blog series from my friend 
-[Allison](https://twitter.com/ErinWith2Ls) who wrote an awesome thing called [Zero To Grails](http://zerotograils.com/)! Sorry Allison! You should check out her awesome work at [More than a pipeline](http://www.morethanapipeline.org/) and [gr8 ladies](http://www.gr8ladies.org/).
-
-Second, I want to point out the excellent reference project for Ratpack called [example-books](https://github.com/ratpack/example-books). This is what I reference when I need to figure out how to do something or what has changed in a Ratpack release. It is updated for every Ratpack release. 
+I want to point out the excellent reference project for Ratpack called [example-books](https://github.com/ratpack/example-books). This is what I reference when I need to figure out how to do something or what has changed in a Ratpack release. It is updated for every Ratpack release. 
 
 Lastly, I've been considering switching the examples in this blog series from Groovy to Java. One advantage of Ratpack is the Groovy DSL and how simple it is to create a quick application with it, but I do think it hides what is really happening in Ratpack a bit. I've decided to stay with Groovy, but to post the equivalent Java once I'm done with the main series.
 
