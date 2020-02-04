@@ -91,8 +91,6 @@ share-links-active:
 # Remove this if you don't want a link in the footer
 url-pretty: "kyleboon.com"  # eg. "deanattali.com/beautiful-jekyll"
 
-# --- Web Statistics Section --- #
-
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 #gtag: ""
 
@@ -101,7 +99,6 @@ google_analytics: "UA-42068604-1"
 
 # Google Tag Manager ID
 #gtm: ""
-
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 disqus: "kyleboon"
@@ -116,8 +113,6 @@ title-separator: "-"
 
 # Ruby Date Format
 date_format: "%B %-d, %Y"
-
-# --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
 timezone: "America/Chicago"
@@ -156,58 +151,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-
-# prose.io config
-prose:
-  rooturl: '_posts'
-  media: 'img'
-  ignore:
-    - 404.html
-    - LICENSE
-    - feed.xml
-    - _config.yml
-    - /_layouts
-    - /_includes
-    - /css
-    - /img
-    - /js
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Post title"
-          placeholder: "Title"
-          alterable: true
-      - name: "subtitle"
-        field:
-          element: "textarea"
-          label: "Subtitle"
-          placeholder: "A description of your post."
-          alterable: true
-      - name: "date"
-        field:
-          element: "text"
-          label: "Date"
-          help: "Enter date of post."
-          placeholder: "yyyy-mm-dd"
-          alterable: true
-      - name: "image"
-        field:
-          element: "text"
-          label: "Image"
-          help: "Add a thumbnail image to your post."
-          placeholder: "Thumbnail"
-          alterable: true
-      - name: "published"
-        field:
-          element: "checkbox"
-          label: "Publish"
-          help: "Check to publish post, uncheck to hide."
 
 plugins:
   - jekyll-paginate
