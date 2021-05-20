@@ -1,8 +1,12 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem "github-pages", '197', group: :jekyll_plugins
+source "https://rubygems.org"
 
-# enable tzinfo-data for local build
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+gem "jekyll"
 gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
 gem 'html-proofer'
+gem 'webrick'
