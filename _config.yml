@@ -15,8 +15,8 @@ url: "https://kyleboon.org"
 
 # baseurl should be an empty string
 domain: "kyleboon.org"       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://www.kyleboon.org  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /kyleboon/kyleboon.org/      # place folder name if the site is served in a subfolder
+url: "https://www.kyleboon.org"  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: ""      # place folder name if the site is served in a subfolder
 
 # --- Navigation bar options --- #
 
