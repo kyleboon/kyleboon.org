@@ -14,7 +14,9 @@ description: Blog of Kyle Boon
 url: "https://kyleboon.org"
 
 # baseurl should be an empty string
-baseurl: ""
+domain: "kyleboon.org"       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://www.kyleboon.org  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /kyleboon/kyleboon.org/      # place folder name if the site is served in a subfolder
 
 # --- Navigation bar options --- #
 
@@ -68,7 +70,6 @@ social-network-links:
   email: "kyle.f.boon@gmail.com"
   facebook: kyleboon
   github: kyleboon
-  twitter: kyleboon
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
