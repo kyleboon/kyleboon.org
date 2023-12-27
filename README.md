@@ -1,5 +1,16 @@
-### Beautiful Jekyll
+# kyleboon.org
 
-> *Copyright 2019 [Dean Attali](https://deanattali.com)*
+Source for my personal website
 
-**Beautiful Jekyll** is a ready-to-use template to help you create an awesome website quickly. Perfect for personal sites, blogs, or simple project websites.  [Check out a demo](https://deanattali.com/beautiful-jekyll) of what you'll get after just two minutes.  You can also look at [his personal website](https://deanattali.com) to see it in use.
+## Installation
+
+To run this Jekyll site locally, follow these steps:
+
+1. Clone the repository
+2. Install gems: `bundle install`
+4. Run Jekyll: `bundle exec jekyll serve`
+5. Open your browser and visit `http://localhost:4000` to see the site.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
