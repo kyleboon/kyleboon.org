@@ -49,7 +49,7 @@ void deleteSubscriptions(EventSource subscriberSource, String subscriberId) {
 ```
 #Solution
 
-I wanted a way to retry test conditions without [retrying the entire test](https://github.com/anotherchrisberry/spock-retry). At first I thought spock [async conditions](http://spockframework.github.io/spock/javadoc/1.0/spock/util/concurrent/AsyncConditions.html) might help, but I misunderstood how they worked. So I decided to write a retriable condition.
+I wanted a way to retry test conditions without [retrying the entire test](https://github.com/anotherchrisberry/spock-retry). At first I thought spock [async conditions](https://spockframework.github.io/spock/javadoc/1.0/spock/util/concurrent/AsyncConditions.html) might help, but I misunderstood how they worked. So I decided to write a retriable condition.
 
 This allows you to retry specific then conditionals. Pass a closure to the ```retry``` method along with a number of retries to execute and optionally an amount of time to pause between executions. The closure *must* make explicit calls to assert. If all attempts and trying the conditions fail, the final assertion failure will bubble up as the test failure reason.
 

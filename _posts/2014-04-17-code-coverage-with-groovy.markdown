@@ -8,7 +8,7 @@ categories: groovy coverage jacoco cobertura
 
 Last year we finally decided to update from JDK6 to JDK7. This was mostly a painless process, however when we upgraded, we started getting very strange code coverage numbers. We were using cobertura 2.0.3 at the time. I also created [an issue](https://github.com/cobertura/cobertura/issues/101) at the time, and more recently a [second issue](https://github.com/cobertura/cobertura/issues/135) was added.
 
-Recently we started looking in to getting our coverage statistics working again so I've done a bit more digging with [John Engleman](http://imperceptiblethoughts.com/). We've tried [jacoco](http://www.eclemma.org/jacoco/) 0.7.0.201403182114, [cobertura](http://cobertura.github.io/cobertura/) 2.0.3 and [clover](https://www.atlassian.com/software/clover/overview) 3.1.12.1. 
+Recently we started looking in to getting our coverage statistics working again so I've done a bit more digging with [John Engleman](https://imperceptiblethoughts.com/). We've tried [jacoco](https://www.eclemma.org/jacoco/) 0.7.0.201403182114, [cobertura](https://cobertura.github.io/cobertura/) 2.0.3 and [clover](https://www.atlassian.com/software/clover/overview) 3.1.12.1. 
 
 I wanted to do an apples to apples comparison of jacoco and cobertura for JDK6 and JDK7 on a [simple groovy project](https://github.com/kyleboon/groovy-code-coverage-examples).
 

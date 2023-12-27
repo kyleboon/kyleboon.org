@@ -2,8 +2,6 @@
 layout: post
 title: Leaving Octopress
 date: 2020-01-29 13:57
-comments: true
-categories: meta
 ---
 
 After 6 years using octopress, I've finally admitted it is dead. I decided to switch to plain jekyll which I should have done a long time ago. My only requirement was to change the URL format on the off chance anyone has ever linked to my blog. I also wanted an extremely simple theme that didn't have tons of css I didn't understand or need.  I picked one called `Beautiful Jekyll`

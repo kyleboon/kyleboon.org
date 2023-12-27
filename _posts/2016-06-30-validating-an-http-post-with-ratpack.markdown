@@ -6,7 +6,7 @@ comments: true
 categories: ratpack groovy
 ---
 
-I do a lot of work with both ratpack and dropwizard for [SmartThings](http://www.smartthings.com). [Dropwizard](http://www.dropwizard.io/) has a lot more opinions than Ratpack does out of the box, but they're opinions I've grown used to and that I mostly agree with. I wanted validation in Ratpack to work as similarly as it does in Dropwizard.
+I do a lot of work with both ratpack and dropwizard for [SmartThings](https://www.smartthings.com). [Dropwizard](https://www.dropwizard.io/) has a lot more opinions than Ratpack does out of the box, but they're opinions I've grown used to and that I mostly agree with. I wanted validation in Ratpack to work as similarly as it does in Dropwizard.
 
 ## Requirements
 
@@ -78,4 +78,4 @@ dependencies {
 
 The ```parseAndValidate``` function parses the json just like you would normally o, then it calls the `route` method on promise and validates the the POGO using the Hibernate Validator. If there are any validation errors, `route` will short-circuit the promise chain and call clientError with a 422 status code. 
 
-This is solution is similar to the Mr. Haki article [Ratpacked: Validating Forms: Validating Forms](http://mrhaki.blogspot.com/2015/11/ratpack-validating-forms.html)
+This is solution is similar to the Mr. Haki article [Ratpacked: Validating Forms: Validating Forms](https://mrhaki.blogspot.com/2015/11/ratpack-validating-forms.html)

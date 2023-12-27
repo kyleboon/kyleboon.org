@@ -41,7 +41,7 @@ copy_function gvm govm
 [[ -s "/home/vagrant/.gvm/bin/gvm-init.sh" ]] && source "/home/vagrant/.gvm/bin/gvm-init.sh"
 ```
 
-The ```copy_function()``` function came from [stack overflow.](http://stackoverflow.com/questions/1203583/how-do-i-rename-a-bash-function)
+The ```copy_function()``` function came from [stack overflow.](https://stackoverflow.com/questions/1203583/how-do-i-rename-a-bash-function)
 
 That's it. Now you have ```gvm``` from groovy and ```govm``` for go.
 

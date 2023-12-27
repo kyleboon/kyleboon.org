@@ -6,7 +6,7 @@ comments: true
 categories: groovy dropwizard load-testing 
 ---
 
-At Bloomhealth we've been running five dropwizard in production for about 6 months. Until recently those services have mostly been for internal tools or low volume external tools. In preparation for heavier use, we started do more extensive load testing of both our grails and dropwizard applications. We've been using [gatling](http://wwww.gatling-tool.org/)   which is a load/performance testing tool in scala. You can write tests using a simple DSL or use a browser based scenario recorder for more complicated workflows. 
+At Bloomhealth we've been running five dropwizard in production for about 6 months. Until recently those services have mostly been for internal tools or low volume external tools. In preparation for heavier use, we started do more extensive load testing of both our grails and dropwizard applications. We've been using [gatling](https://wwww.gatling-tool.org/)   which is a load/performance testing tool in scala. You can write tests using a simple DSL or use a browser based scenario recorder for more complicated workflows. 
 
 I started to wonder if using Groovy 2's static compilation feature would impact the performance of our dropwizard web services in a significant way. I've seen several benchmarks (listed at the end) that demonstrate a dramatic performance benefit with groovy's static compilation but I haven't seen anyone show the same for a production web service.  
 
@@ -57,7 +57,7 @@ Every statistic showed improvement on all 3 test runs, but the overall impact wa
 
 ## References
 * [Static Complication Benchmarks](https://code.google.com/p/jlabgroovy/wiki/Benchmarks)
-* [Stack Overflow Groovy Benchmarks](http://stackoverflow.com/questions/11344412/what-is-the-performance-of-groovy-2-0-with-static-compilation)
-* [Java, Groovy, Kotlin performance comparisonn](http://objectscape.blogspot.de/2012/08/groovy-20-performance-compared-to-java.html)
-* [Yet Another comparisonn](http://java.dzone.com/articles/java-7-vs-groovy-21)
+* [Stack Overflow Groovy Benchmarks](https://stackoverflow.com/questions/11344412/what-is-the-performance-of-groovy-2-0-with-static-compilation)
+* [Java, Groovy, Kotlin performance comparisonn](https://objectscape.blogspot.de/2012/08/groovy-20-performance-compared-to-java.html)
+* [Yet Another comparisonn](https://java.dzone.com/articles/java-7-vs-groovy-21)
 

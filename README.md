@@ -11,6 +11,10 @@ To run this Jekyll site locally, follow these steps:
 4. Run Jekyll: `bundle exec jekyll serve`
 5. Open your browser and visit `http://localhost:4000` to see the site.
 
+To run html proofer:
+
+1. `bundle exec htmlproofer ./_site`
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

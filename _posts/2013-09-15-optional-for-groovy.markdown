@@ -21,5 +21,5 @@ These features allow you to use Optional in a slightly groovier way. What do you
 
 * [Java 8 Optional type](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
 * [Guava's discussion of null and when to avoid it](https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained)
-* [Stack overflow discussion of Optional](http://stackoverflow.com/questions/9561295/whats-the-point-of-guavas-optional-class)
-* [Optional pattern](http://en.wikipedia.org/wiki/Option_type)
+* [Stack overflow discussion of Optional](https://stackoverflow.com/questions/9561295/whats-the-point-of-guavas-optional-class)
+* [Optional pattern](https://en.wikipedia.org/wiki/Option_type)

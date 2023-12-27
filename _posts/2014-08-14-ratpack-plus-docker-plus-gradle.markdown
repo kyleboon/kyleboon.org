@@ -7,7 +7,7 @@ categories: ratpack docker gradle
 ---
 
 This is just a quick example of having gradle build a docker container with
-a ratpack application as part of the build process. You'll need to have docker installed in order for this to work. If you're using OSX then [boot2docker](http://boot2docker.io/) is the best way to go.
+a ratpack application as part of the build process. You'll need to have docker installed in order for this to work. If you're using OSX then [boot2docker](https://boot2docker.io/) is the best way to go.
 
 Eventually I want to have gradle publish the docker container after a successful build of the master branch. Then I can use elastic beanstalk deploy the container with very little effort. 
 
@@ -17,7 +17,7 @@ First, add the shadow and docker plugins to your ratpack build.
 buildscript {
     repositories {
         jcenter()
-        maven { url "http://oss.jfrog.org/repo" }
+        maven { url "https://oss.jfrog.org/repo" }
     }
     dependencies {
         classpath "io.ratpack:ratpack-gradle:0.9.8-SNAPSHOT"

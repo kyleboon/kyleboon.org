@@ -5,7 +5,7 @@ date: 2014-08-12 12:43
 comments: true
 categories: grails spring-security
 ---
-At the end of [part 1](http://kyleboon.org/blog/2014/05/18/two-factor-authentication/), the first step of multi-factor authentication was finished. The second authentication step will verify a token sent via text message to the user. In order to accomplish this, there needs to be a Spring Security filter and authentication provider. The filter will be triggered when the security token is submitted by the user, it will delegate to the authentication provider which will fully authenticate the user and provide the full list of roles from the ```DaoUserDetailsProvider```. 
+At the end of [part 1](https://kyleboon.org/blog/2014/05/18/two-factor-authentication/), the first step of multi-factor authentication was finished. The second authentication step will verify a token sent via text message to the user. In order to accomplish this, there needs to be a Spring Security filter and authentication provider. The filter will be triggered when the security token is submitted by the user, it will delegate to the authentication provider which will fully authenticate the user and provide the full list of roles from the ```DaoUserDetailsProvider```. 
 
 ### Implementing the 2nd Step of authentication
 

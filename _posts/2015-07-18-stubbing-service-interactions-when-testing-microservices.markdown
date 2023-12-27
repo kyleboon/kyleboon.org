@@ -40,7 +40,7 @@ class GithubController {
 }
 ```
 
-And here's a spock integration test that calls ```http://localhost:8080/github/```. Then the embdedded ratpack app stubs out the github response and allows the test to assert on the result. There's also an example test for ensuring errors from github would be appropriately handled.
+And here's a spock integration test that calls ```https://localhost:8080/github/```. Then the embdedded ratpack app stubs out the github response and allows the test to assert on the result. There's also an example test for ensuring errors from github would be appropriately handled.
 
 ```groovy
 @Integration
@@ -50,7 +50,7 @@ class GithubControllerSpec extends Specification {
     def grailsApplication
 
     def setup() {
-        restClient = new RESTClient("http://localhost:8080/")
+        restClient = new RESTClient("https://localhost:8080/")
 
     }
 
@@ -64,7 +64,7 @@ class GithubControllerSpec extends Specification {
             }
         }
 
-        grailsApplication.config.githubApi = "http://${github.address.host}:${github.address.port}"
+        grailsApplication.config.githubApi = "https://${github.address.host}:${github.address.port}"
 
         when:
         def response = restClient.get(path: "github/", contentType: 'application/json', requestContentType: 'application/json')
@@ -85,7 +85,7 @@ class GithubControllerSpec extends Specification {
             }
         }
 
-        grailsApplication.config.githubApi = "http://${github.address.host}:${github.address.port}"
+        grailsApplication.config.githubApi = "https://${github.address.host}:${github.address.port}"
 
         when:
         def response

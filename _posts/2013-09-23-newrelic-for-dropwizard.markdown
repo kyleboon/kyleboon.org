@@ -6,7 +6,7 @@ comments: true
 categories: groovy dropwizard newrelic 
 ---
 
-We are using Yammer Metrics and Graphite but New Relic gives a lot of fantastic information with very little work. We've used it for several years with our Grails applications. In particular, the app server transaction traces gives data that we don't get by default from yammer metrics. Enabling new relic is easy with dropwizard by following [New Relic's directions](http://newrelic.com/java). This really just boils down to adding the new relic java agent when you start dropwizard.
+We are using Yammer Metrics and Graphite but New Relic gives a lot of fantastic information with very little work. We've used it for several years with our Grails applications. In particular, the app server transaction traces gives data that we don't get by default from yammer metrics. Enabling new relic is easy with dropwizard by following [New Relic's directions](https://newrelic.com/java). This really just boils down to adding the new relic java agent when you start dropwizard.
 
 ```bash
 java -javaagent:/path/to/newrelic.jar -jar path/to/dropwizard server start config.yml
