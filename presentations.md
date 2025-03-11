@@ -15,7 +15,7 @@ title: "Technical Presentations"
 <div class="talk-links">
 <ul>
 <li><a href="https://www.youtube.com/watch?v=htzUDtE5iDY">Watch Presentation</a></li>
-<li><a href="https://slides.com/kyleboon/osn-ditch-your-framework">View Slides</a></li>
+<li><a href="https://slides.com/kyleboon/ditch-your-framework-3a46dc">View Slides</a></li>
 </ul>
 </div>
 </div>
