@@ -1,29 +1,77 @@
 ---
 layout: page
-title: "presentations"
-date: 2014-02-01 10:01
-comments: true
-sharing: true
-footer: true
+title: "Technical Presentations"
 ---
 
-{% assign index = true %}
-<div itemscope itemtype="http://schema.org/Blog">
-<div>
-<h1><a href="https://www.youtube.com/watch?v=nVT8Gw-7x_c">Growing Up with Grails from gr8conf US 2014</a></h1>
-<iframe width="560" height="315" src="//www.youtube.com/embed/nVT8Gw-7x_c" frameborder="0" allowfullscreen></iframe>
-<p>Bloom Health was started in December 2009 and has been using grails and other groovy technology from day one. The team has grown to 30 developers, 4 devops and 10 testers. Our architecture has evolved from a single monolithic grails application to five smaller grails applications and a suite of dropwizard services behind them.
+<h1>Conference Talks & Technical Presentations</h1>
 
-Over the last (nearly) five years we've learned a lot and grown up with the groovy ecosystem. I'll share what went well, what didn't and what choices I'd make if I was building a brand new company. If you're new to grails/groovy or are wondering if it could increase your team's productivity, then this is the talk for you!</p>
+<div class="talk-section">
+<h2>Ditch Your Framework</h2>
+<div class="talk-subtitle">A deep dive into framework-free web development</div>
+<div class="talk-meta">Presented at Open Source North</div>
+
+<p>Modern web development doesn't require heavy frameworks. This presentation explores building maintainable web applications using minimal dependencies and focusing on core principles.</p>
+
+<div class="talk-links">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=htzUDtE5iDY">Watch Presentation</a></li>
+<li><a href="https://slides.com/kyleboon/osn-ditch-your-framework">View Slides</a></li>
+</ul>
 </div>
-<div>
-<h1><a href="https://www.youtube.com/watch?v=-WQGIZ90H2w">Vagrant Up from gr8conf US 2014</a></h1>
-<iframe width="560" height="315" src="//www.youtube.com/embed/-WQGIZ90H2w" frameborder="0" allowfullscreen></iframe>
-<p>As your team and software grows, its important to have a consistent development and testing environment for everyone. Vagrant is an open source tool for building and distributing virtualized development environments. Chef is a systems and cloud infrastructure automation framework. At Bloom Health we use vagrant and chef and some custom internal tools to deploy everywhere from a developers laptop all the way through production. This includes 5 grails applications, 5 dropwizard services, mysql, redis and rabbitmq.
-</p>
 </div>
-<div>
-<h1><a href="http://www.infoq.com/presentations/rest-groovy-framework">RESTful Groovy from gr8conf US 2013</a></h1>
-<p>I compare grails and dropwizard for building RESTful webservices, including their code readability, maintainability, deployment, metrics collection, scalability and testability.</p>
+
+<div class="talk-section">
+<h2>Modern JVM Development</h2>
+<div class="talk-subtitle">Building scalable applications in the JVM ecosystem</div>
+<div class="talk-meta">Presented while Lead Engineer at SmartThings (2015-2017)</div>
+
+<p>An exploration of current best practices in JVM development, covering topics like microservices architecture, modern testing approaches, and deployment strategies.</p>
+
+<div class="talk-links">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8FdLHfxjosA">Watch Presentation</a></li>
+</ul>
+</div>
+</div>
+
+<div class="talk-section">
+<h2>Introduction to Ratpack</h2>
+<div class="talk-subtitle">Building high-performance web applications with Ratpack</div>
+<div class="talk-meta">Technical deep-dive on modern web development</div>
+
+<p>A comprehensive introduction to Ratpack, a high-performance, lightweight, composable web framework for the JVM. Learn about its reactive programming model and how it enables building scalable applications.</p>
+
+<div class="talk-links">
+<ul>
+<li><a href="https://slides.com/kyleboon/deck-2">View Slides</a></li>
+</ul>
+</div>
+</div>
+
+<div class="talk-section">
+<h2>Fluent APIs in Groovy</h2>
+<div class="talk-subtitle">Designing elegant and intuitive APIs</div>
+<div class="talk-meta">Technical presentation on API design patterns</div>
+
+<p>Explore how to leverage Groovy's features to create expressive and maintainable APIs. This talk covers DSL design patterns, builder patterns, and best practices for API design.</p>
+
+<div class="talk-links">
+<ul>
+<li><a href="https://slides.com/kyleboon/deck">View Slides</a></li>
+</ul>
+</div>
+</div>
+
+<div class="talk-section">
+<h2>Dropwizard and Groovy</h2>
+<div class="talk-subtitle">Building microservices with Dropwizard</div>
+<div class="talk-meta">Technical session on microservices architecture</div>
+
+<p>A practical guide to building microservices using Dropwizard and Groovy, focusing on real-world applications and best practices for service development.</p>
+
+<div class="talk-links">
+<ul>
+<li><a href="https://slides.com/kyleboon/dropwizard-and-groovy">View Slides</a></li>
+</ul>
 </div>
 </div>

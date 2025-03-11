@@ -1,20 +1,56 @@
 ---
-layout: page
-title: kyleboon.org
+layout: home
+title: Kyle Boon | Staff Software Engineer
 ---
-<p class="circle-logo">
-  <img src="/img/headshot.jpg" class="inline-logo" alt="Photo of kyle boon in a wooded setting.">
-</p>
-<p>
-  Hi there.
-</p>
-<h2>Recent Posts</h2>
-<ul>
-  {% for post in paginator.posts %}
-  <li>
-    <a href="{{ post.url }}">
-      {{ post.title }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="hero-section">
+    <div class="profile-image">
+        <img src="/img/headshot.jpg" alt="Kyle Boon - Staff Software Engineer">
+    </div>
+    
+    <div class="intro-text">
+        <h1>Hi, I'm Kyle Boon</h1>
+        <p class="tagline">Staff Software Engineer specializing in distributed systems and cloud architecture</p>
+        
+        <div class="quick-links">
+            <a href="/aboutme">About Me</a>
+            <a href="/resume">Resume</a>
+            <a href="/presentations">Talks</a>
+            <a href="https://github.com/kyleboon">GitHub</a>
+            <a href="https://www.linkedin.com/in/kyle-boon">LinkedIn</a>
+            <a href="https://www.instagram.com/kboon">Instagram</a>
+        </div>
+    </div>
+</div>
+
+<div class="expertise-section">
+    <h2>What I Do</h2>
+    <div class="expertise-grid">
+        <div class="expertise-item">
+            <h3>Technical Leadership</h3>
+            <p>Leading engineering teams in building scalable, maintainable solutions while fostering a culture of technical excellence.</p>
+        </div>
+        <div class="expertise-item">
+            <h3>Cloud Architecture</h3>
+            <p>Designing and implementing cloud-native systems that balance performance, reliability, and business outcomes.</p>
+        </div>
+        <div class="expertise-item">
+            <h3>Distributed Systems</h3>
+            <p>Building resilient microservices architectures that handle massive scale while maintaining system reliability.</p>
+        </div>
+    </div>
+</div>
+
+<div class="blog-section">
+    <h2>Recent Writing</h2>
+    <ul class="post-list">
+        {% for post in paginator.posts limit:5 %}
+        <li class="post-item">
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+            {% if post.description %}
+            <p class="post-description">{{ post.description }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

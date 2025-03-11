@@ -8,10 +8,12 @@ common-css:
   <a class="sr-only" href="#maincontent">Skip to content</a>
   <nav>
     <div class="title">
-      <a href="/">Kyle Boon</a>
+      <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Kyle Boon</a>
     </div> 
-    <a href="/aboutme">About</a>
-    <a href="/blog">Blog</a>
+    <a href="/aboutme" {% if page.url == '/aboutme' %}aria-current="page"{% endif %}>About</a>
+    <a href="/presentations" {% if page.url == '/presentations' %}aria-current="page"{% endif %}>Presentations</a>
+    <a href="/blog" {% if page.url == '/blog' %}aria-current="page"{% endif %}>Blog</a>
+    <a href="/resume" {% if page.url == '/resume' %}aria-current="page"{% endif %}>Resume</a>
   </nav>
   <body>
     {{ content }}
