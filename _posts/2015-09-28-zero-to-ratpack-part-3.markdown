@@ -7,11 +7,11 @@ categories: ratpack
 published: true
 ---
 
-It has been a while since I wrote another entry in this series but I was energized at [Greach 2016](https://greachconf.com/) and I wanted to finish it.
+It has been a while since I wrote another entry in this series but I was energized at Greach 2016 and I wanted to finish it.
 
 The next step in the reverse proxy is to add additional features. Each new feature is implemented as an additional handler and added to the chain before the handler which will actually call the proxy target and stream the response.
 
-There's a lot of code in this post. You can see the entire project on [github](https://github.com/kyleboon/ratpack-reverse-proxy). I'm not including the tests for the new handlers in this post because they are very similar to the functional test in [part 2](https://kyleboon.org/blog/2015/08/14/zero-to-ratpack-part-2/) and you can see them on github.
+There's a lot of code in this post. You can see the entire project on [github](https://github.com/kyleboon/ratpack-reverse-proxy). I'm not including the tests for the new handlers in this post because they are very similar to the functional test in [part 2]{% post_url 2015-08-14-zero-to-ratpack-part-2 %} and you can see them on github.
 
 ## Refactoring to Modules
 

@@ -16,7 +16,7 @@ I do a lot of work with both ratpack and dropwizard for [SmartThings](https://ww
 
 ## Solution
 
-The solution is pretty simple and it uses the [`Promise.route`](https://ratpack.io/manual/current/api/ratpack/exec/Promise.html#route-ratpack.func.Predicate-ratpack.func.Action-) method to short circuit the promise chain and call `clientError(int statusCode)` immediately. Here's a complete example.
+The solution is pretty simple and it uses the [`Promise.route`](https://ratpack.io/manual/current/api/ratpack/exec/Promise.html) method to short circuit the promise chain and call `clientError(int statusCode)` immediately. Here's a complete example.
 
 ```java
 import org.apache.http.HttpStatus

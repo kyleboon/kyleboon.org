@@ -62,7 +62,7 @@ all { HttpClient httpClient, ProxyConfig proxyConfig ->
 
 # Testing
 
-So far the reverse proxy is very basic and doesn't do much. Before additionally functionality is layered on, it is important to have a functional test to ensure everything keeps working. Testing is an important part of Ratpack and I [previously wrote](https://kyleboon.org/blog/2015/07/18/stubbing-service-interactions-when-testing-microservices/) about how Ratpack can actually improve the testing of Grails and other frameworks. 
+So far the reverse proxy is very basic and doesn't do much. Before additionally functionality is layered on, it is important to have a functional test to ensure everything keeps working. Testing is an important part of Ratpack and I [previously wrote]{% post_url 2016-06-30-validating-an-http-post-with-ratpack %} about how Ratpack can actually improve the testing of Grails and other frameworks. 
 
 A functional test of the reverse proxy requires a proxy target and it is best to avoid external dependencies in tests. Ratpack provides a fantastic feature to overcome this using an ```EmbeddedApp``` in the test itself.  
 
