@@ -1,6 +1,22 @@
 ---
-layout: base
+common-css:
+  - "/css/main.css"
 ---
-<div id="maincontent">
-  {{ content }}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <a class="sr-only" href="#maincontent">Skip to content</a>
+  <nav> 
+    <a href="/">Home</a>
+    <a href="/aboutme" {% if page.url == '/aboutme' %}aria-current="page"{% endif %}>About</a>
+    <a href="/presentations" {% if page.url == '/presentations' %}aria-current="page"{% endif %}>Presentations</a>
+    <a href="/blog" {% if page.url == '/blog' %}aria-current="page"{% endif %}>Blog</a>
+    <a href="/resume" {% if page.url == '/resume' %}aria-current="page"{% endif %}>Resume</a>
+  </nav>
+  <body>
+    <div id="maincontent">
+      {{ content }}
+    </div
+    {% include footer.html %}
+  </body>
+</html>

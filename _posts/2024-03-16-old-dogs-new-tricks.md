@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Keeping my skills sharp
 date: 2025-03-16 
 ---

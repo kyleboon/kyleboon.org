@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Validating An HTTP POST With Ratpack
 date: 2016-06-30 13:39
 comments: true

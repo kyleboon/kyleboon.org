@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Changes
 date: 2023-12-29 13:57
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Zero to Ratpack
 date: 2015-08-05 10:56
 comments: true
