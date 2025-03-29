@@ -4,7 +4,7 @@ title: Kyle Boon | Staff Software Engineer
 ---
 <div class="hero-section">
     <div class="profile-image">
-        <img src="/img/headshot.jpg" alt="Kyle Boon - Staff Software Engineer">
+        <img src="/assets/images/headshot.jpg" alt="Kyle Boon - Staff Software Engineer">
     </div>
     <div class="intro-text">
         <h1>Hi, I'm Kyle Boon</h1>
@@ -24,7 +24,7 @@ title: Kyle Boon | Staff Software Engineer
 <div class="blog-section">
     <h2>Recent Writing</h2>
     <ul class="post-list">
-        {% for post in paginator.posts limit:5 %}
+        {% for post in site.posts limit:5 %}
         <li class="post-item">
             <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
             <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>

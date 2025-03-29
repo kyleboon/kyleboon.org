@@ -1,67 +1,11 @@
-# --- General options --- #
-
-# Name of website
 title: kyleboon.org
-
-# Short description of your site
-description: Blog of Kyle Boon
-
-# --- Local development options ---
-# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
-# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
-
-# url is the the website domain URL without a trailing slash
+email: kyle.f.boon@gmail.com
+description: Kyle Boon's personal website. 
+baseurl: "" 
 url: "https://kyleboon.org"
 
-# baseurl should be an empty string
-domain: "kyleboon.org"       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: "https://www.kyleboon.org"  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: ""      # place folder name if the site is served in a subfolder
-
-
-# Excerpt Word Length
-# Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 50
-
-# Character used to separate site title and description in HTML document title
-# and RSS feed title
-title-separator: "-"
-
-# Ruby Date Format
-date_format: "%B %-d, %Y"
-
-# Output options (more information on Jekyll's site)
-timezone: "America/Chicago"
-permalink: /blog/:year/:month/:day/:title/
-paginate: 5
-
-# Default YAML values (more information on Jekyll's site)
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
-      path: "" # all files
-    values:
-      layout: "page"
-      show-avatar: true
-
-# Use tags index page and make tags on each post clickable
-link-tags: true
-
-# Exclude these files from production site
 exclude:
   - CNAME
-  - Gemfile
-  - Gemfile.lock
   - LICENSE
   - README.md
-
-plugins:
-  - jekyll-sitemap
+  - scripts
