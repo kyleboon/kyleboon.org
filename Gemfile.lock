@@ -324,9 +324,7 @@ DEPENDENCIES
   github-pages (~> 232)
   html-proofer
   jekyll
-  jekyll-paginate
   jekyll-sitemap
-  webrick
 
 BUNDLED WITH
    2.4.10
