@@ -20,7 +20,7 @@
 ## Performance
 - [x] Add `width` and `height` attributes to all `<img>` tags
 - [x] Add `loading="lazy"` to below-the-fold images (book covers)
-- [ ] Consider image optimization pipeline (WebP, compression)
+- [x] Consider image optimization pipeline (WebP, compression)
 
 ## Accessibility
 - [x] Add `lang="en"` to `<html>` in both layouts (already present)
