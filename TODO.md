@@ -3,7 +3,7 @@
 ## Structure
 - [ ] Upgrade Jekyll version (switch to GitHub Actions deployment for Jekyll 4.x)
 - [x] Remove or draft the empty blog post (`_posts/2025-06-04-software-engineering-best-reads.md`)
-- [ ] Add GitHub Actions CI workflow (run htmlproofer on PRs)
+- [x] Add GitHub Actions CI workflow (run htmlproofer on PRs)
 - [x] Enrich blog.html to show dates and descriptions like the homepage
 - [x] Flesh out `_config.yml` (add `plugins`, `permalink`, `markdown`, `timezone` settings)
 
@@ -15,7 +15,7 @@
 ## Security
 - [x] Add Content Security Policy meta tag in `head.html`
 - [x] Consider adding AI crawler rules to `robots.txt` (GPTBot, CCBot, etc.)
-- [ ] Evaluate removing `keybase.txt` if no longer using Keybase
+- [x] Evaluate removing `keybase.txt` if no longer using Keybase (keeping it)
 
 ## Performance
 - [x] Add `width` and `height` attributes to all `<img>` tags
