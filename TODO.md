@@ -2,13 +2,13 @@
 
 ## Structure
 - [ ] Upgrade Jekyll version (switch to GitHub Actions deployment for Jekyll 4.x)
-- [ ] Remove or draft the empty blog post (`_posts/2025-06-04-software-engineering-best-reads.md`)
+- [x] Remove or draft the empty blog post (`_posts/2025-06-04-software-engineering-best-reads.md`)
 - [ ] Add GitHub Actions CI workflow (run htmlproofer on PRs)
 - [ ] Enrich blog.html to show dates and descriptions like the homepage
 - [ ] Flesh out `_config.yml` (add `plugins`, `permalink`, `markdown`, `timezone` settings)
 
 ## Design / CSS
-- [ ] Fix mobile base font size (24px -> 18px)
+- [x] Fix mobile base font size (24px -> 18px)
 - [ ] Add `<meta name="theme-color">` tag for mobile browser chrome
 - [ ] Scope book hover effects to hover-capable devices with `@media (hover: hover)`
 
