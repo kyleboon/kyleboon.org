@@ -14,7 +14,7 @@
 
 ## Security
 - [x] Add Content Security Policy meta tag in `head.html`
-- [ ] Consider adding AI crawler rules to `robots.txt` (GPTBot, CCBot, etc.)
+- [x] Consider adding AI crawler rules to `robots.txt` (GPTBot, CCBot, etc.)
 - [ ] Evaluate removing `keybase.txt` if no longer using Keybase
 
 ## Performance
