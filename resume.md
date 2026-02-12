@@ -76,15 +76,17 @@ A results-driven software architect with 20+ years of experience specializing in
 
 ## Skills
 
-**Languages:** Kotlin, Java, Groovy, Python, Go, Ruby, JavaScript, TypeScript, HTML, CSS, SQL
+**Languages:** Kotlin, Java, Python, Go, TypeScript, JavaScript, SQL
 
-**Frameworks:** Disruptor, Http4k, Ratpack, Grails, Dropwizard, Spring, Spring Boot, Hibernate, GraphQL, REST
+**Frameworks & APIs:** Spring Boot, Http4k, Hibernate, GraphQL, gRPC, Protocol Buffers, REST
 
-**Automation:** Gradle, Maven, Git, Vagrant, Jenkins, Ansible, CircleCI, Gitlab
+**AI/ML:** RAG pipelines, LLM integration, OpenAI API, Anthropic API
 
-**Infrastructure:** Kafka, Redis, Elastic Search, RabbitMQ, MySql, Postgres, Cassandra, Heroku, AWS, Docker, Google Cloud Services, Kubernetes, Grafana, ELK
+**Infrastructure:** AWS, Google Cloud, Kubernetes, Docker, Terraform, Kafka, Redis, Elasticsearch, RabbitMQ, PostgreSQL, MySQL, DynamoDB, Cassandra, Snowflake
 
-**Leadership Skills:** Technical Mentorship, Distributed Team Leadership, Cross-functional Collaboration, Strategic Technical Planning, System Design & Architecture Review, Microservice Decomposition Methodologies, Technical Debt Management, Legacy System Modernization
+**CI/CD & Observability:** GitHub Actions, GitLab CI, Gradle, Maven, Git, Datadog, Grafana, ELK
+
+**Leadership:** Technical Mentorship, Distributed Team Leadership, Cross-functional Collaboration, Strategic Technical Planning, System Design & Architecture Review, Technical Debt Management, Legacy System Modernization
 
 ## Education
 
