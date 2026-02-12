@@ -24,7 +24,7 @@
 
 ## Accessibility
 - [x] Add `lang="en"` to `<html>` in both layouts (already present)
-- [ ] Review and improve image `alt` text
+- [x] Review and improve image `alt` text
 
 ## SEO
 - [x] Add `<link rel="canonical">` URL tags in `head.html`
