@@ -1,7 +1,7 @@
 # Site Improvements TODO
 
 ## Structure
-- [ ] Upgrade Jekyll version (switch to GitHub Actions deployment for Jekyll 4.x)
+- [x] Upgrade Jekyll version (switch to GitHub Actions deployment for Jekyll 4.x)
 - [x] Remove or draft the empty blog post (`_posts/2025-06-04-software-engineering-best-reads.md`)
 - [x] Add GitHub Actions CI workflow (run htmlproofer on PRs)
 - [x] Enrich blog.html to show dates and descriptions like the homepage
