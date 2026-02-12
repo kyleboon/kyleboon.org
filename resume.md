@@ -4,9 +4,24 @@ title: Resume
 ---
 ## Principal Software Engineer | Distributed Systems | Cloud Architecture | Technical Leadership
 
-A results-driven software architect with 20+ years of experience specializing in distributed systems, cloud architecture, and technical transformations. Proven track record of modernizing monolithic applications into scalable microservices while mentoring engineering teams to deliver high-quality solutions. Expert in designing systems that balance performance, reliability, and business outcomes, recently leading a customer MDM system supporting 800M+ users and orchestrating microservices adoption across 9 engineering teams. Seeking a Staff/Principal Engineer role where I can drive technical excellence and innovation in a collaborative environment.
+Principal Software Engineer with 20+ years of experience specializing in distributed systems, cloud architecture, and technical transformations. Proven track record of modernizing monolithic applications into scalable microservices while mentoring engineering teams to deliver high-quality solutions. Expert in designing systems that balance performance, reliability, and business outcomes, from customer MDM systems supporting 800M+ users to platform modernization across enterprise-scale global operations.
 
 ## Experience
+
+### RB Global, Remote
+**Principal Software Engineer** (April 2025 - Present)
+
+- Provide technical leadership across enterprise-scale platforms, driving architecture and design decisions for large-scale, business-critical systems supporting global operations.
+
+- Drive technical direction across multiple teams, ensuring alignment with enterprise standards, security, and data governance practices.
+
+- Partner with product, data, and business stakeholders to design systems that balance velocity, quality, and maintainability.
+
+- Influence platform evolution in master data management, domain modeling, and regulatory-driven system design including data residency and compliance initiatives.
+
+- Contribute to enterprise architecture forums and guilds, shaping shared patterns, principles, and best practices across the organization.
+
+- Mentor senior and mid-level engineers, raising the bar for engineering excellence across the organization.
 
 ### Wayfair, Remote
 **Staff Software Engineer** (June 2022 - March 2025)
