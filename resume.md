@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 ---
-## Staff Software Engineer | Distributed Systems | Cloud Architecture | Technical Leadership
+## Principal Software Engineer | Distributed Systems | Cloud Architecture | Technical Leadership
 
 A results-driven software architect with 20+ years of experience specializing in distributed systems, cloud architecture, and technical transformations. Proven track record of modernizing monolithic applications into scalable microservices while mentoring engineering teams to deliver high-quality solutions. Expert in designing systems that balance performance, reliability, and business outcomes, recently leading a customer MDM system supporting 800M+ users and orchestrating microservices adoption across 9 engineering teams. Seeking a Staff/Principal Engineer role where I can drive technical excellence and innovation in a collaborative environment.
 
