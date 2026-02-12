@@ -361,10 +361,16 @@ img+em {
     align-items: start;
 }
 
-.book-item:hover {
-    border-color: var(--link);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+@media (hover: hover) {
+    .book-item:hover {
+        border-color: var(--link);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-item:hover .book-cover {
+        transform: scale(1.02);
+    }
 }
 
 .book-cover {
@@ -374,10 +380,6 @@ img+em {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     transition: transform 0.2s ease;
-}
-
-.book-item:hover .book-cover {
-    transform: scale(1.02);
 }
 
 .book-content {

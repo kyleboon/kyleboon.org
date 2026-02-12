@@ -10,7 +10,7 @@
 ## Design / CSS
 - [x] Fix mobile base font size (24px -> 18px)
 - [x] Add `<meta name="theme-color">` tag for mobile browser chrome
-- [ ] Scope book hover effects to hover-capable devices with `@media (hover: hover)`
+- [x] Scope book hover effects to hover-capable devices with `@media (hover: hover)`
 
 ## Security
 - [ ] Add Content Security Policy meta tag in `head.html`
