@@ -29,4 +29,4 @@
 ## SEO
 - [ ] Add `<link rel="canonical">` URL tags in `head.html`
 - [ ] Make Open Graph tags dynamic per page (title, description, image)
-- [ ] Use dynamic copyright year in footer (`{{ site.time | date: '%Y' }}`)
+- [x] Use dynamic copyright year in footer (`{{ site.time | date: '%Y' }}`)
