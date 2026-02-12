@@ -5,7 +5,7 @@
 - [x] Remove or draft the empty blog post (`_posts/2025-06-04-software-engineering-best-reads.md`)
 - [ ] Add GitHub Actions CI workflow (run htmlproofer on PRs)
 - [x] Enrich blog.html to show dates and descriptions like the homepage
-- [ ] Flesh out `_config.yml` (add `plugins`, `permalink`, `markdown`, `timezone` settings)
+- [x] Flesh out `_config.yml` (add `plugins`, `permalink`, `markdown`, `timezone` settings)
 
 ## Design / CSS
 - [x] Fix mobile base font size (24px -> 18px)

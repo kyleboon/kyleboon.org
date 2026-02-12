@@ -1,11 +1,21 @@
 title: kyleboon.org
 email: kyle.f.boon@gmail.com
-description: Kyle Boon's personal website. 
-baseurl: "" 
+description: Kyle Boon's personal website.
+baseurl: ""
 url: "https://kyleboon.org"
+timezone: America/Chicago
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-sitemap
 
 exclude:
   - CNAME
   - LICENSE
   - README.md
+  - CLAUDE.md
+  - TODO.md
   - scripts
+  - Gemfile
+  - Gemfile.lock
