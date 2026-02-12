@@ -28,7 +28,7 @@ Principal Software Engineer with 20+ years of experience specializing in distrib
 
 - Architected and implemented B2B Project Shopping features through federated GraphQL schema design, successfully integrating order management, supply chain, and internal sales workflows.
 
-- Designed and delivered a scalable customer master data management system handling 800M+ global customers, improving B2B enrollment time by 95% and reduced data synchronization errors by over 99%.
+- Designed and delivered a scalable customer master data management system handling 800M+ global customers, improving B2B enrollment time by 95% and reducing data synchronization errors by over 99%.
 
 - Established domain-driven design practices to help teams properly identify bounded contexts and negotiated those boundaries across the Wayfair organization to ensure data and processes were owned by a single team.
 
@@ -55,8 +55,6 @@ Principal Software Engineer with 20+ years of experience specializing in distrib
 - Architected and implemented critical microservices during SmartThings' monolith decomposition, establishing best practices for API design and service boundaries.
 
 - Executed zero-downtime database migrations from MySQL to Cassandra and Aurora for high-traffic services.
-
-- Cooked 70 lbs of BBQ for a company picnic.
 
 ### Bloom Health, Minneapolis, MN
 **Technical Lead** (June 2012 – March 2015)

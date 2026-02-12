@@ -5,6 +5,8 @@ date: 2025-03-16
 ---
 # Keeping My Skills Sharp
 
+*Update: I started as a Principal Software Engineer at RB Global in April 2025.*
+
 About a week ago I found out that my job as a Staff Engineer was eliminated as part of restructuring at Wayfair. This was the 5th time something like this had happened during my nearly three years there, so it wasn't a complete shock.
 
 As I dive into the job search, I wanted to find a way to keep my skills sharp. I really don't like "grinding leetcode" as the kids say, for a few reasons. Leetcode skills are not the same as real world skills, and I want to do something that improves my real world programming abilities while also being fun. I'm fairly confident in my abilities to pass a technical interview, so I don't feel the need to spend all my time on that.
