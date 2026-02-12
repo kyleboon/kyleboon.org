@@ -13,7 +13,7 @@
 - [x] Scope book hover effects to hover-capable devices with `@media (hover: hover)`
 
 ## Security
-- [ ] Add Content Security Policy meta tag in `head.html`
+- [x] Add Content Security Policy meta tag in `head.html`
 - [ ] Consider adding AI crawler rules to `robots.txt` (GPTBot, CCBot, etc.)
 - [ ] Evaluate removing `keybase.txt` if no longer using Keybase
 
