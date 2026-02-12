@@ -19,7 +19,7 @@
 
 ## Performance
 - [x] Add `width` and `height` attributes to all `<img>` tags
-- [ ] Add `loading="lazy"` to below-the-fold images (book covers)
+- [x] Add `loading="lazy"` to below-the-fold images (book covers)
 - [ ] Consider image optimization pipeline (WebP, compression)
 
 ## Accessibility
