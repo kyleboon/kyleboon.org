@@ -4,6 +4,7 @@ _site
 .idea
 .jekyll-cache
 .superpowers/
+.worktrees/
 
 # general
 .DS_Store
