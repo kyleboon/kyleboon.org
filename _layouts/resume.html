@@ -3,7 +3,7 @@ layout: page
 ---
 <header class="resume-header">
   <p class="resume-eyebrow">Resume</p>
-  <h1 class="resume-name">{{ page.name }}</h1>
+  <h1 class="resume-name">{{ page.display_name }}</h1>
   <p class="resume-specialties">
     {{ page.role }}
     {%- for s in page.specialties %} · {{ s }}{%- endfor -%}

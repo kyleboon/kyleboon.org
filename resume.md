@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: Resume
-name: Kyle Boon
+display_name: Kyle Boon
 role: Principal Software Engineer
 specialties:
   - Distributed Systems
