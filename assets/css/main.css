@@ -636,6 +636,11 @@ main#maincontent {
   margin-bottom: 2.5rem;
 }
 
+.talk-section + .talk-section {
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 2.5rem;
+}
+
 .talk-section h2 {
   margin-bottom: 0.35em;
   margin-top: 0;
@@ -662,11 +667,29 @@ main#maincontent {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .talk-links li {
   display: inline-block;
-  margin-right: 1.5em;
+}
+
+.talk-links a {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  transition: border-color var(--ease), color var(--ease);
+}
+
+.talk-links a:hover, .talk-links a:focus {
+  border-color: var(--rust);
+  color: var(--rust);
+  text-decoration: none;
 }
 
 /* --------- Code and pre --------- */
