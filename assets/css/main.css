@@ -272,3 +272,49 @@ em {
 .post-header .post-meta .post-category {
   color: var(--rust);
 }
+
+/* --------- Navigation --------- */
+
+nav {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+}
+
+nav a {
+  color: var(--ink);
+  margin-right: 1.75rem;
+  display: inline-block;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  color: var(--rust);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+nav a[aria-current="page"]:hover {
+  color: var(--rust);
+}
+
+main#maincontent {
+  margin-top: 0;
+}
