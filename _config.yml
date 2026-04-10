@@ -17,6 +17,7 @@ exclude:
   - CLAUDE.md
   - TODO.md
   - scripts
+  - docs
   - Gemfile
   - Gemfile.lock
 
