@@ -572,3 +572,180 @@ main#maincontent {
   margin: 0.5rem 0.75rem -0.25rem 0;
   padding: 0;
 }
+
+/* --------- Books list --------- */
+
+.book-list {
+  padding: 0;
+  margin: 2.5rem 0;
+}
+
+.book-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule-soft);
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.book-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.book-cover {
+  width: 120px;
+  height: 180px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  margin: 0;
+  transition: opacity var(--ease);
+}
+
+.book-item:hover .book-cover {
+  opacity: 0.92;
+}
+
+.book-content {
+  min-width: 0;
+}
+
+.book-item h3 {
+  margin: 0 0 0.35em;
+  font-size: 1.375rem;
+  font-variation-settings: "opsz" 30, "SOFT" 20;
+}
+
+.book-author {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin-bottom: 0.75em;
+}
+
+.book-item p {
+  margin: 0.5em 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+  .book-item {
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    padding: 1.1rem 0;
+  }
+
+  .book-cover {
+    width: 90px;
+    height: 135px;
+  }
+
+  .book-item h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* --------- Presentations / talks --------- */
+
+.talk-section {
+  margin-bottom: 2.5rem;
+}
+
+.talk-section h2 {
+  margin-bottom: 0.35em;
+  margin-top: 0;
+}
+
+.talk-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5em;
+  font-variation-settings: "opsz" 18;
+}
+
+.talk-meta {
+  margin-bottom: 1em;
+}
+
+.talk-links {
+  margin-top: 1em;
+}
+
+.talk-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talk-links li {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+/* --------- Code and pre --------- */
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  background: var(--rust-soft);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--rust-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* --------- Figure captions (markdown: ![alt](img)*caption*) --------- */
+
+img + em {
+  position: relative;
+  top: -0.75em;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--ink-dim);
+  font-style: italic;
+}
+
+/* --------- Footer --------- */
+
+footer {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin: 4rem 0 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule-soft);
+  line-height: 1.5;
+}
+
+footer a {
+  color: var(--ink-dim);
+}
+
+footer a:hover {
+  color: var(--rust);
+}
