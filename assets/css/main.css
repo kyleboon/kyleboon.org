@@ -1,440 +1,789 @@
-/* Base styles */
-:root {
-    --border: #dedede;
-    --text: #16161d;
-    --background: #fafafa;
-    --link: #16c;
-    --nav-spacing: 1em;
-    --section-spacing: 2em;
-    --text-line-height: 1.6;
-    --base-font-size: 18px;
+/* ============================================================
+   kyleboon.org — Warm Craft
+   See docs/style-guide.md for the full system reference.
+   ============================================================ */
+
+/* --------- Font faces (self-hosted) --------- */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/fraunces-latin-full.woff2") format("woff2-variations"),
+       url("/assets/fonts/fraunces-latin-full.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/inter-latin-wght.woff2") format("woff2-variations"),
+       url("/assets/fonts/inter-latin-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --------- Tokens (light) --------- */
+
+:root {
+  /* Color */
+  --paper: #f6f1e8;
+  --ink: #201612;
+  --ink-muted: #3a2b24;
+  --ink-dim: #7a5b4a;
+  --rust: #b5581f;
+  --rust-visited: #8a4520;
+  --rust-soft: rgba(181, 88, 31, 0.08);
+  --rule: rgba(32, 22, 18, 0.12);
+  --rule-soft: rgba(32, 22, 18, 0.06);
+
+  /* Shape */
+  --radius: 4px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease: 150ms ease;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* Layout */
+  --measure-mobile: 100%;
+  --measure-tablet: 48rem;
+  --measure-desktop: 54rem;
+
+  /* Base size */
+  --base-font-size: 18px;
+}
+
+/* --------- Tokens (dark) --------- */
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text: #e1e1e1;
-        --background: #1a1a1a;
-        --border: #333;
-        --link: #66b3ff;
-    }
+  :root {
+    --paper: #1c140e;
+    --ink: #f0e6d6;
+    --ink-muted: rgba(240, 230, 214, 0.78);
+    --ink-dim: #c29876;
+    --rust: #d08858;
+    --rust-visited: #a76a42;
+    --rust-soft: rgba(208, 136, 88, 0.10);
+    --rule: rgba(240, 230, 214, 0.12);
+    --rule-soft: rgba(240, 230, 214, 0.06);
+  }
 }
 
-/* Force scrollbar to prevent layout shift */
+/* --------- Reset (minimal) --------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
 html {
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    font-size: var(--base-font-size);
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  font-size: var(--base-font-size);
 }
 
 body {
-    font-family: -apple-system, system-ui, sans-serif;
-    line-height: var(--text-line-height);
-    color: var(--text);
-    background: var(--background);
-    letter-spacing: 0.01em;
-    -webkit-font-smoothing: antialiased;
-    padding: 1.25rem;
-    margin: 0 auto;
-    max-width: 100%;
-    min-height: 100vh;
+  margin: 0 auto;
+  padding: 1.25rem;
+  max-width: var(--measure-mobile);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+    max-width: var(--measure-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 2rem 3rem;
+    max-width: var(--measure-desktop);
+  }
+}
+
+/* --------- Skip link --------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  padding: 0.5rem 1rem;
+  background: var(--rust);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+/* --------- Links (base) --------- */
+
 a {
-    color: var(--link);
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--rust);
+  text-decoration: none;
+  transition: color var(--ease);
 }
 
 a:hover, a:focus, a:active {
-    text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 }
 
-nav {
-    font-size: 95%;
-    padding: var(--nav-spacing) 0;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: var(--section-spacing);
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: var(--background);
-    z-index: 100;
+a:visited {
+  color: var(--rust-visited);
 }
 
-nav a {
-    color: inherit;
-    margin-right: var(--nav-spacing);
-    position: relative;
-    display: inline-block;
+/* --------- Images --------- */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
 }
 
-nav a:hover {
-    text-decoration: none;
+/* --------- Typography --------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.5em 0 0.5em;
+  text-wrap: balance;
 }
 
-nav a:hover:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: var(--link);
-    bottom: -2px;
-    left: 0;
-}
-
-nav a[aria-current="page"] {
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: 1.5em;
-    font-size: 1.2rem;
-}
-
-/* Mobile-first typography */
 h1 {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin: 1.5em 0 0.75em;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 72, "SOFT" 30;
+  margin-top: 0.5em;
 }
 
 h2 {
-    font-size: 1.6rem;
-    line-height: 1.35;
-    margin: 1.25em 0 0.6em;
+  font-size: 1.625rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 36, "SOFT" 20;
 }
 
 h3 {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    margin: 1em 0 0.5em;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 24;
 }
 
-.post-description {
-    font-size: 1.2rem;
-    line-height: var(--text-line-height);
-    margin: 0.75em 0;
+p {
+  margin: 0 0 1.25em;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Role eyebrow — the signature element on the home hero */
+.role-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  margin: 0 0 0.75rem;
+  line-height: 1;
+}
+
+
+/* Tagline below the home H1 */
 .tagline {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    margin: 1em 0;
-    opacity: 0.9;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin: 0 0 1.5rem;
+  max-width: 38ch;
 }
 
-/* Improve readability for code blocks */
-pre {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    padding: 1.25em;
-    margin: 1.5em 0;
-    overflow-x: auto;
-    background: var(--background);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+/* Generic meta (dates, category labels) */
+.post-meta, .post-date, .talk-meta {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+  line-height: 1.4;
 }
 
-code {
-    font-size: 1.1em;
-    background: rgba(127, 127, 127, 0.1);
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
+/* Post-header row (above blog post H1) */
+.post-header {
+  margin-bottom: 1.5rem;
 }
 
-/* Tablet and desktop styles */
-@media (min-width: 768px) {
-    body {
-        padding: 2rem;
-        max-width: 45em;
-    }
-
-    h1 { font-size: 2.2rem; }   
-    h2 { font-size: 1.7rem; }
-    h3 { font-size: 1.45rem; }
-    
-    .tagline {
-        font-size: 1.5rem;
-    }
+.post-header .post-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
-/* Large screens */
-@media (min-width: 1200px) {
-    body {
-        padding: 2rem 3rem;
-        max-width: 50em;
-    }
+.post-header .post-meta .post-category {
+  color: var(--rust);
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 1.5em 0;
+/* --------- Navigation --------- */
+
+nav {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
 }
 
-footer {
-    font-size: small;
-    margin: 2.5em 0 1.5em 0;
+nav a {
+  color: var(--ink);
+  margin-right: 1.75rem;
+  display: inline-block;
 }
 
-img+em {
-    position: relative;
-    top: -1em;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    font-size: smaller;
+nav a:last-child {
+  margin-right: 0;
 }
 
-#maincontent {
-    margin-top:0;
+nav a:hover {
+  color: var(--rust);
+  text-decoration: none;
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+nav a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--ink);
 }
 
-/* Presentations page styling */
-.talk-section {
-    margin-bottom: var(--section-spacing);
+nav a[aria-current="page"]:hover {
+  color: var(--rust);
 }
 
-.talk-section h2 {
-    color: var(--text);
-    margin-bottom: 0.5em;
-    margin-top: 0;
+main#maincontent {
+  margin-top: 0;
 }
 
-.talk-subtitle {
-    font-style: italic;
-    color: var(--text);
-    opacity: 0.8;
-    margin-bottom: 0.5em;
-}
+/* --------- Home hero --------- */
 
-.talk-meta {
-    font-size: 0.9em;
-    color: var(--text);
-    opacity: 0.7;
-    margin-bottom: 1em;
-}
-
-.talk-links {
-    margin-top: 1em;
-}
-
-.talk-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.talk-links li {
-    display: inline-block;
-    margin-right: 1.5em;
-}
-
-.talk-links a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-.talk-links a:hover {
-    text-decoration: underline;
-}
-
-/* Index page styling */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0 0;
+  text-align: center;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
 }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0;
+.profile-image img, .profile-image picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0;
+  display: block;
 }
 
 .intro-text {
-    width: 100%;
+  width: 100%;
 }
 
+.intro-text h1 {
+  font-size: clamp(3rem, 9vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+  margin: 0 0 0.75rem;
+}
+
+/* Quick-link pills under the tagline */
 .quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
 }
 
 .quick-links a {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  transition: border-color var(--ease), color var(--ease);
 }
 
-.blog-section {
-    padding: 0;
-    margin-top: 0;
+.quick-links a:hover, .quick-links a:focus {
+  border-color: var(--rust);
+  color: var(--rust);
+  text-decoration: none;
 }
+
+/* Blog section under the hero */
+.blog-section {
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.blog-section h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  font-family: var(--font-body);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  font-variation-settings: normal;
+}
+
+/* Tablet+ — side-by-side hero */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    padding: 2rem 0 0;
+  }
+
+  .quick-links {
+    justify-content: flex-start;
+  }
+
+  .blog-section {
+    margin-top: 3.5rem;
+  }
+}
+
+/* --------- Blog list (index + home recent) --------- */
 
 .post-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .post-item {
-    margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule-soft);
 }
 
-.post-date {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--text);
-    opacity: 0.8;
+.post-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.post-item .post-date {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
 }
 
 .post-link {
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 24;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  margin: 0;
+  transition: color var(--ease);
 }
 
-.post-description {
-    font-size: 0.95rem;
-    margin: 0.5rem 0 0 0;
+.post-link:hover, .post-link:focus {
+  color: var(--rust);
+  text-decoration: none;
 }
 
+.post-item .post-description {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  margin: 0.5rem 0 0;
+  line-height: 1.55;
+}
+
+/* Desktop — two-column date | title */
 @media (min-width: 768px) {
-    .hero-section {
-        flex-direction: row;
-        text-align: left;
-    }
+  .post-item {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.1rem 0;
+  }
 
-    .profile-image {
-        flex-shrink: 0;
-    }
+  .post-item .post-date {
+    margin: 0;
+    padding-top: 0.25rem;
+  }
 
-    .quick-links {
-        justify-content: flex-start;
-    }
+  .post-item .post-description {
+    grid-column: 2;
+  }
 }
 
-/* Book list styling */
+/* --------- Blog post body prose --------- */
+
+.post-body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.post-body > h1:first-of-type {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 96, "SOFT" 35;
+  margin: 0 0 1.5rem;
+}
+
+.post-body h2 {
+  margin-top: 2rem;
+}
+
+.post-body h3 {
+  margin-top: 1.5rem;
+}
+
+.post-body p {
+  margin: 0 0 1.25em;
+  color: var(--ink);
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.5em;
+}
+
+.post-body blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rust);
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.post-body hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* Drop cap — span is injected by the post layout around the first letter of
+   the first paragraph. Using a span (rather than ::first-letter) avoids the
+   spec behavior where ::first-letter grabs trailing punctuation too, which
+   breaks posts that start with a contraction like "I'd". */
+.post-body .dropcap {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--rust);
+  float: left;
+  margin: 0.5rem 0.75rem -0.25rem 0;
+  padding: 0;
+}
+
+/* --------- Books list --------- */
+
 .book-list {
-    padding: 0;
-    margin: var(--section-spacing) 0;
+  padding: 0;
+  margin: 2.5rem 0;
 }
 
 .book-item {
-    margin-bottom: var(--section-spacing);
-    padding: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1.5rem;
-    align-items: start;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule-soft);
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-@media (hover: hover) {
-    .book-item:hover {
-        border-color: var(--link);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-item:hover .book-cover {
-        transform: scale(1.02);
-    }
+.book-item:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .book-cover {
-    width: 120px;
-    height: 180px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    transition: transform 0.2s ease;
+  width: 120px;
+  height: 180px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  margin: 0;
+  transition: opacity var(--ease);
+}
+
+.book-item:hover .book-cover {
+  opacity: 0.92;
 }
 
 .book-content {
-    flex: 1;
-    min-width: 0;
+  min-width: 0;
 }
 
 .book-item h3 {
-    margin: 0 0 0.5em 0;
-    font-size: 1.4rem;
-    line-height: 1.3;
-    color: var(--text);
+  margin: 0 0 0.35em;
+  font-size: 1.375rem;
+  font-variation-settings: "opsz" 30, "SOFT" 20;
 }
 
 .book-author {
-    font-size: 1.1rem;
-    color: var(--text);
-    opacity: 0.8;
-    margin-bottom: 1em;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin-bottom: 0.75em;
 }
 
 .book-item p {
-    margin: 0.5em 0;
-    font-size: 1.2rem;
-    line-height: var(--text-line-height);
-    opacity: 0.9;
+  margin: 0.5em 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
 }
 
 @media (max-width: 640px) {
-    .book-item {
-        grid-template-columns: 100px 1fr;
-        gap: 1rem;
-        padding: 0.75rem;
-    }
+  .book-item {
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    padding: 1.1rem 0;
+  }
 
-    .book-cover {
-        width: 100px;
-        height: 150px;
-    }
+  .book-cover {
+    width: 90px;
+    height: 135px;
+  }
 
-    .book-item h3 {
-        font-size: 1.3rem;
-    }
-
-    .book-author {
-        font-size: 1rem;
-    }
+  .book-item h3 {
+    font-size: 1.25rem;
+  }
 }
 
-@media (min-width: 768px) {
-    .book-item {
-        padding: 1.5rem;
-    }
+/* --------- Presentations / talks --------- */
 
-    .book-item h3 {
-        font-size: 1.45rem;
-    }
+.talk-section {
+  margin-bottom: 2.5rem;
+}
+
+.talk-section h2 {
+  margin-bottom: 0.35em;
+  margin-top: 0;
+}
+
+.talk-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5em;
+  font-variation-settings: "opsz" 18;
+}
+
+.talk-meta {
+  margin-bottom: 1em;
+}
+
+.talk-links {
+  margin-top: 1em;
+}
+
+.talk-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talk-links li {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+/* --------- Code and pre --------- */
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  background: var(--rust-soft);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--rust-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* --------- Figure captions (markdown: ![alt](img)*caption*) --------- */
+
+img + em {
+  position: relative;
+  top: -0.75em;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--ink-dim);
+  font-style: italic;
+}
+
+/* --------- Footer --------- */
+
+footer {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin: 4rem 0 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule-soft);
+  line-height: 1.5;
+}
+
+footer a {
+  color: var(--ink-dim);
+}
+
+footer a:hover {
+  color: var(--rust);
+}
+
+/* --------- Focus --------- */
+
+:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+a:focus-visible,
+.quick-links a:focus-visible,
+.post-link:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+  text-decoration: none;
+}
+
+/* --------- Reduced motion --------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------- Print --------- */
+
+@media print {
+  body {
+    max-width: 100%;
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+
+  nav, footer, .quick-links {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .post-body .dropcap {
+    font-size: inherit;
+    float: none;
+    margin: 0;
+    color: black;
+    font-style: inherit;
+    font-weight: inherit;
+    font-variation-settings: normal;
+  }
 }

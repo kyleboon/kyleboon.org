@@ -5,11 +5,11 @@ common-css:
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <a class="sr-only" href="#maincontent">Skip to content</a>
   <body>
+    <a class="sr-only" href="#maincontent">Skip to content</a>
     <header>
-      <nav> 
-        <a href="/">Home</a>
+      <nav>
+        <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
         <a href="/aboutme" {% if page.url == '/aboutme' %}aria-current="page"{% endif %}>About</a>
         <a href="/blog" {% if page.url == '/blog' %}aria-current="page"{% endif %}>Blog</a>
         <a href="/presentations" {% if page.url == '/presentations' %}aria-current="page"{% endif %}>Technical Presentations</a>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Layering Ratpack Configuration
 date: 2016-01-10 08:07
 comments: true

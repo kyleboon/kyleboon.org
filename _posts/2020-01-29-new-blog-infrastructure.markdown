@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Leaving Octopress
 date: 2020-01-29 13:57
 ---

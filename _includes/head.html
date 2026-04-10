@@ -8,8 +8,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <!-- Theme color for mobile browser chrome -->
-    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f6f1e8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1c140e" media="(prefers-color-scheme: dark)">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -24,7 +24,7 @@
     <meta name="description" content="{{ page_description }}">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="{% if page.layout == 'page' and page.date %}article{% else %}website{% endif %}">
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page_url }}">
     <meta property="og:title" content="{{ page_title }}">
     <meta property="og:description" content="{{ page_description }}">
@@ -37,5 +37,7 @@
     <meta name="twitter:description" content="{{ page_description }}">
     <meta name="twitter:image" content="{{ page_image }}">
 
+    <link rel="preload" href="/assets/fonts/fraunces-latin-full.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>

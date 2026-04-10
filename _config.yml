@@ -17,5 +17,13 @@ exclude:
   - CLAUDE.md
   - TODO.md
   - scripts
+  - docs
   - Gemfile
   - Gemfile.lock
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
