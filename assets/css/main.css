@@ -491,3 +491,84 @@ main#maincontent {
     grid-column: 2;
   }
 }
+
+/* --------- Blog post body prose --------- */
+
+.post-body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.post-body > h1:first-of-type {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 96, "SOFT" 35;
+  margin: 0 0 1.5rem;
+}
+
+.post-body h2 {
+  margin-top: 2rem;
+}
+
+.post-body h3 {
+  margin-top: 1.5rem;
+}
+
+.post-body p {
+  margin: 0 0 1.25em;
+  color: var(--ink);
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.5em;
+}
+
+.post-body blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rust);
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.post-body hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* Drop cap — ONLY on the first paragraph after the post H1 */
+.post-body > h1:first-of-type + p::first-letter {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--rust);
+  float: left;
+  margin: 0.5rem 0.75rem -0.25rem 0;
+  padding: 0;
+}
+
+/* Fallback — if there is no H1 in the markdown (future posts might rely on layout title), drop cap the very first paragraph instead */
+.post-body > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--rust);
+  float: left;
+  margin: 0.5rem 0.75rem -0.25rem 0;
+  padding: 0;
+}
