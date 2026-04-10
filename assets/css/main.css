@@ -537,22 +537,11 @@ main#maincontent {
   margin: 2.5rem 0;
 }
 
-/* Drop cap — ONLY on the first paragraph after the post H1 */
-.post-body > h1:first-of-type + p::first-letter {
-  font-family: var(--font-display);
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: 5.5rem;
-  line-height: 0.85;
-  font-style: italic;
-  font-weight: 500;
-  color: var(--rust);
-  float: left;
-  margin: 0.5rem 0.75rem -0.25rem 0;
-  padding: 0;
-}
-
-/* Fallback — if there is no H1 in the markdown (future posts might rely on layout title), drop cap the very first paragraph instead */
-.post-body > p:first-of-type::first-letter {
+/* Drop cap — span is injected by the post layout around the first letter of
+   the first paragraph. Using a span (rather than ::first-letter) avoids the
+   spec behavior where ::first-letter grabs trailing punctuation too, which
+   breaks posts that start with a contraction like "I'd". */
+.post-body .dropcap {
   font-family: var(--font-display);
   font-variation-settings: "opsz" 144, "SOFT" 50;
   font-size: 5.5rem;
@@ -788,11 +777,13 @@ a:focus-visible,
     text-decoration: underline;
   }
 
-  .post-body > h1:first-of-type + p::first-letter,
-  .post-body > p:first-of-type::first-letter {
+  .post-body .dropcap {
     font-size: inherit;
     float: none;
     margin: 0;
     color: black;
+    font-style: inherit;
+    font-weight: inherit;
+    font-variation-settings: normal;
   }
 }

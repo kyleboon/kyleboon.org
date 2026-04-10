@@ -1,6 +1,44 @@
 ---
 layout: page
 ---
+{%- comment -%}
+  Pre-render the post content with the first letter of the first paragraph
+  wrapped in a .dropcap span. This replaces a CSS ::first-letter pseudo-element
+  approach because ::first-letter includes trailing punctuation (e.g. the
+  apostrophe in "I'd"), which looks broken as a drop cap.
+
+  Handles two first-paragraph shapes:
+  - <p>X...     → <p><span class="dropcap">X</span>...
+  - <p><em>X... → <p><em><span class="dropcap">X</span>...
+
+  Any other shape (starts with a different inline tag, empty, etc.) falls
+  through with no drop cap, which is preferable to a broken one.
+{%- endcomment -%}
+
+{%- assign _parts = content | split: '<p>' -%}
+{%- assign _rendered = content -%}
+
+{%- if _parts.size > 1 -%}
+  {%- assign _first_p = _parts[1] -%}
+  {%- assign _first_char = _first_p | slice: 0, 1 -%}
+
+  {%- if _first_char == '<' -%}
+    {%- assign _first_four = _first_p | slice: 0, 4 -%}
+    {%- if _first_four == '<em>' -%}
+      {%- assign _letter = _first_p | slice: 4, 1 -%}
+      {%- if _letter != '' and _letter != '<' -%}
+        {%- capture _orig -%}<p><em>{{ _letter }}{%- endcapture -%}
+        {%- capture _new -%}<p><em><span class="dropcap">{{ _letter }}</span>{%- endcapture -%}
+        {%- assign _rendered = content | replace_first: _orig, _new -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- elsif _first_char != '' -%}
+    {%- capture _orig -%}<p>{{ _first_char }}{%- endcapture -%}
+    {%- capture _new -%}<p><span class="dropcap">{{ _first_char }}</span>{%- endcapture -%}
+    {%- assign _rendered = content | replace_first: _orig, _new -%}
+  {%- endif -%}
+{%- endif -%}
+
 <article class="post-body">
   <header class="post-header">
     <div class="post-meta">
@@ -12,5 +50,5 @@ layout: page
       {% endif %}
     </div>
   </header>
-  {{ content }}
+  {{ _rendered }}
 </article>
