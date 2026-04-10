@@ -1,16 +1,16 @@
 ---
 layout: page
 ---
-<header class="post-header">
-  <div class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    {% if page.categories.size > 0 %}
-    &middot; <span class="post-category">{{ page.categories | first | upcase }}</span>
-    {% else %}
-    &middot; <span class="post-category">WRITING</span>
-    {% endif %}
-  </div>
-</header>
 <article class="post-body">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.categories.size > 0 %}
+      &middot; <span class="post-category">{{ page.categories | first | upcase }}</span>
+      {% else %}
+      &middot; <span class="post-category">WRITING</span>
+      {% endif %}
+    </div>
+  </header>
   {{ content }}
 </article>
