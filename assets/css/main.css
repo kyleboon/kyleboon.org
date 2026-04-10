@@ -749,3 +749,58 @@ footer a {
 footer a:hover {
   color: var(--rust);
 }
+
+/* --------- Focus --------- */
+
+:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+a:focus-visible,
+.quick-links a:focus-visible,
+.post-link:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+  text-decoration: none;
+}
+
+/* --------- Reduced motion --------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------- Print --------- */
+
+@media print {
+  body {
+    max-width: 100%;
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+
+  nav, footer, .quick-links {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .post-body > h1:first-of-type + p::first-letter,
+  .post-body > p:first-of-type::first-letter {
+    font-size: inherit;
+    float: none;
+    margin: 0;
+    color: black;
+  }
+}
