@@ -167,3 +167,108 @@ img {
   height: auto;
   margin: 1.5em 0;
 }
+
+/* --------- Typography --------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.5em 0 0.5em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 72, "SOFT" 30;
+  margin-top: 0.5em;
+}
+
+h2 {
+  font-size: 1.625rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 36, "SOFT" 20;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 24;
+}
+
+p {
+  margin: 0 0 1.25em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Role eyebrow — the signature element on the home hero */
+.role-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  margin: 0 0 0.75rem;
+  line-height: 1;
+}
+
+/* Oversized home H1 */
+.home-h1, #maincontent > .hero-section h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+  margin: 0 0 0.75rem;
+}
+
+/* Tagline below the home H1 */
+.tagline {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin: 0 0 1.5rem;
+  max-width: 38ch;
+}
+
+/* Generic meta (dates, category labels) */
+.post-meta, .post-date, .talk-meta {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+  line-height: 1.4;
+}
+
+/* Post-header row (above blog post H1) */
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-header .post-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.post-header .post-meta .post-category {
+  color: var(--rust);
+}
