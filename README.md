@@ -1,19 +1,22 @@
 # kyleboon.org
 
-Source for my personal website
+Source for my personal website at [www.kyleboon.org](https://www.kyleboon.org).
 
-## Installation
+Built with Jekyll, zero JavaScript, no CSS framework. Uses the Warm Craft design system (self-hosted Fraunces + Inter fonts, cream/cocoa paper-and-ink palette). See [`docs/style-guide.md`](docs/style-guide.md) for the full design reference.
 
-To run this Jekyll site locally, follow these steps:
+## Local development
 
 1. Clone the repository
 2. Install gems: `bundle install`
-4. Run Jekyll: `bundle exec jekyll serve`
-5. Open your browser and visit `http://localhost:4000` to see the site.
+3. Run Jekyll: `bundle exec jekyll serve`
+4. Open `http://localhost:4000`
 
-To run html proofer:
+## Validation
 
-1. `bundle exec htmlproofer ./_site`
+```bash
+bundle exec jekyll build
+bundle exec htmlproofer ./_site
+```
 
 ## License
 

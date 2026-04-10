@@ -15,11 +15,17 @@ This is a Jekyll-based personal website hosted on GitHub Pages at www.kyleboon.o
 
 ## Architecture
 
-- **Layouts:** Two layouts in `_layouts/` — `home.html` (no nav, used for index) and `page.html` (includes nav header with Home, About, Blog, Presentations, Resume links)
-- **Includes:** `_includes/head.html` and `_includes/footer.html` are shared partials
-- **Posts:** Markdown files in `_posts/` using `YYYY-MM-DD-slug.md` naming convention with `layout: page` front matter
-- **Top-level pages:** `index.html`, `aboutme.html`, `blog.html`, `books.html`, `presentations.html`, `resume.md` — these are standalone pages, not in `_posts/`
-- **CSS:** Single stylesheet at `assets/css/main.css`
+- **Layouts:** Four layouts in `_layouts/`:
+  - `home.html` — no nav, used for index page (hero + recent posts)
+  - `page.html` — includes sticky nav header, used for About, Blog, Books, Presentations
+  - `post.html` — inherits from `page`, adds meta row (date + category) and wraps content in `<article class="post-body">` with Liquid-injected drop cap
+  - `resume.html` — inherits from `page`, renders header from front matter variables (display_name, role, specialties, summary)
+- **Includes:** `_includes/head.html` (meta tags, font preloads, CSS) and `_includes/footer.html`
+- **Posts:** Markdown files in `_posts/` using `YYYY-MM-DD-slug.md` naming convention with `layout: post` front matter. The `_config.yml` defaults block sets `layout: post` for all posts automatically.
+- **Top-level pages:** `index.html`, `aboutme.html`, `blog.html`, `books.html`, `presentations.html`, `resume.md`
+- **CSS:** Single stylesheet at `assets/css/main.css` using the Warm Craft design system (Fraunces + Inter, cream/cocoa palette, rust accent). All design tokens are CSS custom properties.
+- **Fonts:** Self-hosted variable fonts in `assets/fonts/` — Fraunces (display) and Inter (body), Latin subset woff2 files. CSP requires `font-src 'self'`.
+- **Design system:** `docs/style-guide.md` is the living reference for typography, color tokens, components, and do/don't rules. Read this before making visual changes.
 - **Scripts:** `scripts/fetch_covers.sh` downloads book cover images from Google Books API into `assets/images/books/`
 
 ## Post Front Matter
@@ -27,11 +33,21 @@ This is a Jekyll-based personal website hosted on GitHub Pages at www.kyleboon.o
 Posts use this front matter format:
 ```yaml
 ---
-layout: page
+layout: post
 title: Post Title
 date: YYYY-MM-DD
 ---
 ```
+
+## Design
+
+The site uses the **Warm Craft** design system: Fraunces serif for display/headings, Inter sans for body/UI, a paper-and-ink metaphor (cream `#f6f1e8` light / cocoa `#1c140e` dark), and a rust accent (`#b5581f` / `#d08858`). Zero JavaScript, no CSS framework. See `docs/style-guide.md` for the full token reference, component patterns, and do/don't rules.
+
+Key visual patterns:
+- **Eyebrow labels** (uppercase tracked Inter) above H1s on every content page
+- **Two-column date grid** on the blog list and resume job entries
+- **Drop cap** (Fraunces italic, rust) on the first paragraph of blog posts
+- **Quick-link pills** (border + radius) on the home page and presentation links
 
 ## Deployment
 
