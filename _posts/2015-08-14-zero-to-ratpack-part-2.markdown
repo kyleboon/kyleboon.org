@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Zero to Ratpack - Part 2
 date: 2015-08-14 14:34
 comments: true
