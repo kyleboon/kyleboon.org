@@ -731,6 +731,186 @@ footer a:hover {
   color: var(--rust);
 }
 
+/* --------- Resume --------- */
+
+.resume-header {
+  margin-bottom: 2rem;
+}
+
+.resume-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-dim);
+  margin: 0 0 0.75rem;
+  line-height: 1;
+}
+
+.resume-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 72, "SOFT" 30;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.resume-specialties {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink-muted);
+  margin: 0 0 1.25rem;
+  line-height: 1.5;
+}
+
+.resume-summary {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+  max-width: 60ch;
+}
+
+/* Section titles (EXPERIENCE, SKILLS, EDUCATION) */
+.resume-section-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-dim);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.5rem;
+  margin: 2.5rem 0 1rem;
+  font-variation-settings: normal;
+}
+
+.resume-section:first-of-type .resume-section-title {
+  margin-top: 0;
+}
+
+/* Job entries — two-column date grid */
+.resume-entry {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.resume-entry:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.resume-date {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.resume-company {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variation-settings: "opsz" 24;
+  color: var(--ink);
+  margin: 0 0 0.15rem;
+  line-height: 1.25;
+}
+
+.resume-role {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin: 0 0 0.6rem;
+  line-height: 1.4;
+}
+
+.resume-bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.resume-bullets li {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin-bottom: 0.35rem;
+}
+
+.resume-bullets li::marker {
+  color: var(--rust);
+}
+
+.resume-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills grid */
+.resume-skills {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 0.5rem 1.5rem;
+}
+
+.resume-skill-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  padding-top: 0.15rem;
+}
+
+.resume-skill-values {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+/* Desktop — two-column grid for entries */
+@media (min-width: 768px) {
+  .resume-entry {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0 1.5rem;
+  }
+
+  .resume-date {
+    margin-bottom: 0;
+    padding-top: 0.2rem;
+  }
+}
+
+/* Mobile — skills grid stacks */
+@media (max-width: 767px) {
+  .resume-skills {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .resume-skill-label {
+    margin-top: 0.75rem;
+  }
+
+  .resume-skill-label:first-of-type {
+    margin-top: 0;
+  }
+}
+
 /* --------- Focus --------- */
 
 :focus-visible {

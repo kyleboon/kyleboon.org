@@ -179,6 +179,24 @@ Title is Fraunces H3, author is Inter italic in `--ink-dim`, description is body
 
 Inter 0.8125rem italic, `color: var(--ink-dim)`. Separators are the pipe character (not bullets or slashes). Stays quiet.
 
+### Resume
+
+Dedicated layout (`_layouts/resume.html`) with header rendered from front matter variables.
+
+**Header structure:** `.resume-eyebrow` (same treatment as home "RECENT WRITING") → `.resume-name` (Fraunces page-scale H1) → `.resume-specialties` (Inter, `--ink-muted`, middot-separated) → `.resume-summary` (Inter body, `--ink-muted`, `max-width: 60ch`).
+
+**Section titles:** `.resume-section-title` — same eyebrow treatment as blog list section header (uppercase, tracked, `--ink-dim`, bottom rule).
+
+**Job entries:** `.resume-entry` uses a two-column CSS grid on ≥ 768px:
+- Left: `.resume-date` (9rem, uppercase tracked Inter, `--ink-dim`)
+- Right: `.resume-content` containing `.resume-company` (Fraunces H3, opsz 24), `.resume-role` (italic Inter, `--ink-dim`), and `.resume-bullets` (Inter 0.875rem, `--ink-muted`, rust bullet markers)
+- Separator: `border-top: 1px solid var(--rule-soft)` between entries
+- Mobile: stacks — date becomes eyebrow above company
+
+**Skills:** `.resume-skills` grid (10rem label column, 1fr values). Labels use uppercase tracked treatment. Mobile stacks.
+
+**Education:** Same `.resume-entry` grid as job entries.
+
 ## 6. Motion
 
 - All transitions: `150ms ease` on color/border-color only. No transform, no translate, no scale on UI chrome.
