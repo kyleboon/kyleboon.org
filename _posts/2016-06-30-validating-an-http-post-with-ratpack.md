@@ -2,8 +2,9 @@
 layout: post
 title: Validating An HTTP POST With Ratpack
 date: 2016-06-30 13:39
-comments: true
-categories: ratpack groovy
+description: >-
+  Implementing JSR-303 bean validation for HTTP POST handlers in Ratpack,
+  inspired by Dropwizard's automatic validation pattern.
 ---
 
 I do a lot of work with both ratpack and dropwizard for [SmartThings](https://www.smartthings.com). [Dropwizard](https://www.dropwizard.io/) has a lot more opinions than Ratpack does out of the box, but they're opinions I've grown used to and that I mostly agree with. I wanted validation in Ratpack to work as similarly as it does in Dropwizard.

@@ -2,8 +2,9 @@
 layout: post
 title: Zero to Ratpack
 date: 2015-08-05 10:56
-comments: true
-categories: ratpack
+description: >-
+  Building a reverse proxy with Ratpack from scratch, covering async handlers,
+  the handler chain, and why Ratpack is worth learning.
 ---
 # Introduction
 

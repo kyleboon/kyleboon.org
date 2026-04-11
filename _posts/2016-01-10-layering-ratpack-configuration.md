@@ -2,8 +2,9 @@
 layout: post
 title: Layering Ratpack Configuration
 date: 2016-01-10 08:07
-comments: true
-categories: ratpack
+description: >-
+  How to layer YAML files, system properties, and environment variables
+  in Ratpack configuration, with a real Heroku deployment example.
 ---
 
 Over the last few weeks I have upgraded my pet project [CellarHQRatpack](https://github.com/CellarHQ/cellarhq.com) from the ancient Ratpack 0.9.15 to the current 1.1.1, and also moved it from being hosted on AWS Elastic Beanstalk to Heroku. In the process I redid the configuration more than 1 time. The [documentation](https://ratpack.io/manual/current/config.html#quick_start) while accurate, lacks any concrete examples. 

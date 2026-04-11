@@ -2,6 +2,9 @@
 layout: post
 title: Changes
 date: 2023-12-29 13:57
+description: >-
+  Migrating to GitHub Pages, writing custom CSS with no frameworks or JavaScript,
+  and cleaning house on old blog posts.
 ---
 # Website Changes
 

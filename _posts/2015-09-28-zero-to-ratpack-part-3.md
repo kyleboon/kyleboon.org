@@ -2,9 +2,9 @@
 layout: post
 title: Zero to Ratpack - Part 3
 date: 2016-04-10 11:05
-comments: true
-categories: ratpack
-published: true
+description: >-
+  Refactoring the reverse proxy into Ratpack modules and adding new features
+  through composable handlers in the chain.
 ---
 
 It has been a while since I wrote another entry in this series but I was energized at Greach 2016 and I wanted to finish it.

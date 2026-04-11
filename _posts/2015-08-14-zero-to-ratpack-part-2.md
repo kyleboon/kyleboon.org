@@ -2,8 +2,9 @@
 layout: post
 title: Zero to Ratpack - Part 2
 date: 2015-08-14 14:34
-comments: true
-categories: ratpack
+description: >-
+  Adding configuration and testing to the Ratpack reverse proxy, using
+  Groovy and the example-books reference project.
 ---
 
 # Some Notes
