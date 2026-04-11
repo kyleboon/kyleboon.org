@@ -14,7 +14,7 @@ As I dive into the job search, I wanted to find a way to keep my skills sharp. I
 
 ## What I actually want to learn
 
-I use databases every day but I've never written a query planner. I've been deploying to Kubernetes for years but couldn't build a container runtime from scratch. I use Redis constantly but I've never implemented the protocol. Though I have a friend who would insist that implementing Redis from scratch is the solution to basically any problem. He's usually right.
+I use databases every day but I've never written a query planner. I've been deploying to Kubernetes for years but couldn't build a container runtime from scratch. I use Redis constantly but I've never implemented the protocol. 
 
 I wanted to close gaps like these, not grind algorithm puzzles that I'll forget by next month. I also wanted something structured enough to keep me moving forward on the days when the job search makes it hard to self-motivate. A course, a project, something with stages I can check off.
 
@@ -60,7 +60,7 @@ Coding Challenges is a weekly Substack that posts a new coding challenge every w
 
 **Pros:**
 - Wide variety of interesting projects, pick based on what sounds fun
-- The Redis clone course would absolutely delight my friend
+- The Redis clone course looks well structured and interesting
 
 **Cons:**
 - I want something a little more structured. Most of these challenges can't realistically be finished in a week, which would frustrate me. Great source of ideas though.
