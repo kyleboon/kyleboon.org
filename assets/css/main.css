@@ -720,6 +720,186 @@ pre code {
   padding: 0;
 }
 
+/* --------- Syntax highlighting (Rouge) --------- */
+
+.highlight .c,   /* comment */
+.highlight .c1,  /* comment.single */
+.highlight .cm,  /* comment.multiline */
+.highlight .cs,  /* comment.special */
+.highlight .cd   /* comment.doc */
+  { color: #8a7560; font-style: italic; }
+
+.highlight .k,   /* keyword */
+.highlight .kd,  /* keyword.declaration */
+.highlight .kn,  /* keyword.namespace */
+.highlight .kp,  /* keyword.pseudo */
+.highlight .kr,  /* keyword.reserved */
+.highlight .kt,  /* keyword.type */
+.highlight .kv,  /* keyword.variable */
+.highlight .kc   /* keyword.constant */
+  { color: #a0522d; font-weight: 600; }
+
+.highlight .s,   /* string */
+.highlight .s1,  /* string.single */
+.highlight .s2,  /* string.double */
+.highlight .sb,  /* string.backtick */
+.highlight .sh,  /* string.heredoc */
+.highlight .sx   /* string.other */
+  { color: #5a7a3a; }
+
+.highlight .sr   /* string.regex */
+  { color: #6a7a4a; }
+
+.highlight .si,  /* string.interpol */
+.highlight .se   /* string.escape */
+  { color: #8a5a2a; }
+
+.highlight .nb   /* name.builtin */
+  { color: #7a5430; }
+
+.highlight .nc,  /* name.class */
+.highlight .nn,  /* name.namespace */
+.highlight .no   /* name.constant */
+  { color: #8a4a20; }
+
+.highlight .nf,  /* name.function */
+.highlight .ni   /* name.entity */
+  { color: var(--rust); }
+
+.highlight .na   /* name.attribute */
+  { color: #5a7a3a; }
+
+.highlight .nt   /* name.tag */
+  { color: #a0522d; }
+
+.highlight .m,   /* literal.number */
+.highlight .mi,  /* number.integer */
+.highlight .mf,  /* number.float */
+.highlight .mh,  /* number.hex */
+.highlight .mo,  /* number.oct */
+.highlight .mb,  /* number.bin */
+.highlight .mx,  /* number.integer.long */
+.highlight .il   /* number.integer.long */
+  { color: #4a6a8a; }
+
+.highlight .nv,  /* name.variable */
+.highlight .vc,  /* variable.class */
+.highlight .vg,  /* variable.global */
+.highlight .vi,  /* variable.instance */
+.highlight .vm   /* variable.magic */
+  { color: #6a5a3a; }
+
+.highlight .o,   /* operator */
+.highlight .ow   /* operator.word */
+  { color: var(--ink-muted); font-weight: 600; }
+
+.highlight .p    /* punctuation */
+  { color: var(--ink-muted); }
+
+.highlight .ne   /* name.exception */
+  { color: #a04040; font-weight: 600; }
+
+.highlight .nl   /* name.label */
+  { color: #8a5a2a; }
+
+.highlight .py   /* name.property */
+  { color: #6a5a3a; }
+
+.highlight .gd   /* diff: deleted */
+  { color: #82071e; background: rgba(255, 100, 100, 0.1); }
+
+.highlight .gi   /* diff: inserted */
+  { color: #116329; background: rgba(100, 200, 100, 0.1); }
+
+.highlight .gh,  /* generic.heading */
+.highlight .gu   /* generic.subheading */
+  { color: var(--ink); font-weight: 700; }
+
+.highlight .ge   /* generic.emph */
+  { font-style: italic; }
+
+.highlight .gs   /* generic.strong */
+  { font-weight: 700; }
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .highlight .c,
+  .highlight .c1,
+  .highlight .cm,
+  .highlight .cs,
+  .highlight .cd
+    { color: #9a8a76; }
+
+  .highlight .k,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kt,
+  .highlight .kv,
+  .highlight .kc
+    { color: #d09060; }
+
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2,
+  .highlight .sb,
+  .highlight .sh,
+  .highlight .sx
+    { color: #a0c080; }
+
+  .highlight .sr
+    { color: #90b070; }
+
+  .highlight .si,
+  .highlight .se
+    { color: #c8a070; }
+
+  .highlight .nb
+    { color: #c0a070; }
+
+  .highlight .nc,
+  .highlight .nn,
+  .highlight .no
+    { color: #d09868; }
+
+  .highlight .nf,
+  .highlight .ni
+    { color: var(--rust); }
+
+  .highlight .na
+    { color: #a0c080; }
+
+  .highlight .nt
+    { color: #d09060; }
+
+  .highlight .m,
+  .highlight .mi,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mo,
+  .highlight .mb,
+  .highlight .mx,
+  .highlight .il
+    { color: #7aacca; }
+
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi,
+  .highlight .vm
+    { color: #c0a878; }
+
+  .highlight .ne
+    { color: #d08080; }
+
+  .highlight .gd
+    { color: #e08080; background: rgba(255, 100, 100, 0.08); }
+
+  .highlight .gi
+    { color: #80c080; background: rgba(100, 200, 100, 0.06); }
+}
+
 /* --------- Figure captions (markdown: ![alt](img)*caption*) --------- */
 
 img + em {
