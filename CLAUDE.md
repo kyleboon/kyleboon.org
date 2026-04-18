@@ -26,7 +26,16 @@ This is a Jekyll-based personal website hosted on GitHub Pages at www.kyleboon.o
 - **CSS:** Single stylesheet at `assets/css/main.css` using the Warm Craft design system (Fraunces + Inter, cream/cocoa palette, rust accent). All design tokens are CSS custom properties.
 - **Fonts:** Self-hosted variable fonts in `assets/fonts/` — Fraunces (display) and Inter (body), Latin subset woff2 files. CSP requires `font-src 'self'`.
 - **Design system:** `docs/style-guide.md` is the living reference for typography, color tokens, components, and do/don't rules. Read this before making visual changes.
-- **Scripts:** `scripts/fetch_covers.sh` downloads book cover images from Google Books API into `assets/images/books/`
+- **Scripts:**
+  - `scripts/fetch_covers.sh` downloads book cover images from Google Books API into `assets/images/books/`
+  - `scripts/optimize_images.sh [directory]` resizes images to 1200px wide, converts to WebP, and removes originals. Run before committing new images.
+
+## Images
+
+**ALWAYS** verify images before committing:
+1. Run `scripts/optimize_images.sh` on any directory with new images.
+2. Confirm all images are WebP format and no larger than ~200KB each.
+3. Remove any images not referenced in HTML/Markdown files.
 
 ## Post Front Matter
 

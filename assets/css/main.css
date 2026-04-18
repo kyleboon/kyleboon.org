@@ -692,6 +692,68 @@ main#maincontent {
   text-decoration: none;
 }
 
+/* --------- Woodworking gallery --------- */
+
+.project-section {
+  margin-bottom: 3rem;
+}
+
+.project-section + .project-section {
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 2.5rem;
+}
+
+.project-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.project-description {
+  color: var(--ink-muted);
+  margin: 0 0 1.5rem;
+  max-width: 60ch;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin: 1.5rem 0 0;
+}
+
+.project-item {
+  margin: 0;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 0;
+  display: block;
+}
+
+.project-caption {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.project-caption:empty {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 2rem;
+  }
+}
+
 /* --------- Code and pre --------- */
 
 pre {

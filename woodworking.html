@@ -1,0 +1,85 @@
+---
+layout: page
+title: "Woodworking"
+# Each project has a title, optional description, and an ordered list of images.
+# Reorder images within a project by moving lines; move an image between projects
+# by moving its `- file:` entry. Add per-image captions with `caption: "..."`.
+# Add more projects by copying the block shape below.
+projects:
+  - title: "Cherry Dining Table - 2019"
+    description: "My first big project was a dining table based on Christopher Schwarz's design for an American style trestle table. The base and top are in cherry and finished with Rubio Monocoat."
+    images:
+      - file: 58118392532__0ECBC306-0A49-4C2D-A972-4441C78DE370.webp
+        caption: "I started with s4s cherry because I don't have any milling tools"
+      - file: 58118474033__99215A92-D052-4FA7-A00E-92520BD637D5.webp
+        caption: "Trying to get a nice grain match for the top"
+      - file: 58144834630__6F0C4AA1-69B1-4633-A7DB-81FCF005D369.webp
+        caption: "Laying out the base"
+      - file: IMG_4262.webp
+        caption: "Cutting the tenons on the stretcher with the table saw"
+      - file: IMG_4936.webp
+        caption: "Dry fitting the base"
+      - file: IMG_0036.webp
+        caption: "Applying rubio monocoat finish to the table"
+      - file: IMG_0097.webp
+        caption: "Completed table in our dining room"
+  - title: "Knockdown Nicholson Workbench - 2021"
+    description: "I built the table before I had a real workbench, so I used sawhorses and a piece of plywood. I built this during the pandemic out of douglas fir."
+    images:
+      - file: IMG_2715.webp     
+        caption: Douglas Fir 2x12s    
+      - file: IMG_3634.webp
+        caption: Adding a backing board for the sides
+      - file: IMG_3625.webp  
+        caption: Glueing up the legs   
+      - file: IMG_3626.webp
+        caption: Finished legs
+      - file: 65327881230__12C10E20-CE1F-411A-9EC9-A92E4E1F6681.webp
+        caption: Attaching the legs to the sides                             
+      - file: IMG_3620.webp
+        caption: Glueing the top. Trying to use some cauls to keep it flat.  
+      - file: IMG_3656.webp
+        caption: Assembling the top and sides.                                                               
+      - file: IMG_3761.webp
+        caption:  Finished bench! 
+  - title: "Dutch Tool Chest - 2021"
+    description: "Mike Siemsen ran a class for me and three friends to build a Dutch Tool Chest using Megan Fitzpatrick's design. The chest is made from pine and painted with milk paint, red on top of black. It stores all my hand tools but it's getting pretty full. I'd like to build a stand with additional storage for it."
+    images:
+      - file: IMG_4031.webp
+        caption: "My first time cutting dovetails"
+      - file: IMG_4037.webp
+        caption: "The case assembled without the lid or front hatch"
+      - file: IMG_4045.webp
+        caption: "Completed chest before leaving Mike's shop."
+      - file: IMG_1912.webp
+        caption: "Finished and painted tool chest"
+  - title: "Miscellaneous Projects"
+    images: 
+      - file: IMG_1082.webp
+        caption: "Cutting board from maple, cherry and walnut"
+      - file: IMG_1021.webp
+        caption: "Picture frame for an antique map of Scotland and Ireland"
+---
+<p class="role-eyebrow">Shop</p>
+<h1>Woodworking</h1>
+
+<p>
+    I build things slowly in my shop in Saint Paul. So far I've made a dining table, several picture frames, and a workbench I'm still breaking in. Right now I'm working through some small boxes. I'm self-taught and still figuring out what I like — hand tools, hardwood, simple joinery. These are some photos from the shop.
+</p>
+
+{% for project in page.projects %}
+<section class="project-section">
+    <h2>{{ project.title }}</h2>
+    {% if project.description and project.description != "" %}
+    <p class="project-description">{{ project.description }}</p>
+    {% endif %}
+    <div class="project-gallery">
+    {% for img in project.images %}
+        <figure class="project-item">
+            <img src="/assets/images/woodworking/{{ img.file }}" alt="{{ img.caption | default: project.title }}" loading="lazy">
+            {% if img.caption %}<figcaption class="project-caption">{{ img.caption }}</figcaption>{% endif %}
+        </figure>
+    {% endfor %}
+    </div>
+</section>
+{% endfor %}
